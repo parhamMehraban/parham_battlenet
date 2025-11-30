@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Object Sans';
+    src: url('ObjectSans-Medium.eot');
+    src: url('ObjectSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('ObjectSans-Medium.woff2') format('woff2'),
+        url('ObjectSans-Medium.woff') format('woff'),
+        url('ObjectSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
