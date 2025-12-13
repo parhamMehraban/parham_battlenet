@@ -17,8 +17,8 @@
       <!-- #region header -->
       <div class="header w-full overflow-hidden">
         <div class="header_center w-full h-full mx-auto">
-          <div class="header_top">
-            <div class="top_left">
+          <div class="header_top flex flex-row flex-wrap">
+            <div class="top_left h-12 w-12 mr-[360px]">
               <div
                 class="hamburger w-10 h-10 hover:bg-white/5 m-2 rounded-[5px] flex items-center justify-center"
               >
@@ -93,7 +93,7 @@
                 </svg>
               </div>
               <div
-                class="menuMobile w-[89%] h-screen absolute top-0 -left-full transition-all duration-300 bg-[#1A1C23]"
+                class="menuMobile z-10 w-[89%] h-screen absolute top-0 -left-full transition-all duration-300 bg-[#1A1C23]"
               >
                 <div
                   class="close w-10 h-10 rounded-[5px] bg-[#424F6995] hover:bg-[#424F69] m-2 flex items-center justify-center"
@@ -922,14 +922,14 @@
                     alt="img-32"
                   />
                 </div>
-                <div class="w-full h-[136px] p-2 pb-38 bg-[#222327]">
+                <div class="w-full h-[300px] p-2 pb-38 bg-[#222327]">
                   <details
-                    class="collapse bg-[#1A1C23] text-white/80"
+                    class="collapse bg-[#0f1118] text-white rounded-[5px]"
                     name="my-accordion-det-1"
                   >
                     <summary class="collapse-title hover:bg-white/5">
                       <div class="flex flex-row flex-wrap gap-1 font-bold">
-                        <div>Battle.net Balane</div>
+                        <div>Battle.net Balance</div>
                         <div class="mt-[5px]">
                           <svg
                             fill="#ffffff80"
@@ -956,74 +956,161 @@
                       </div>
                     </summary>
                     <div
-                      class="collapse-content bg-[#15171e] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3"
+                      class="collapse-content bg-[#0f1118] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3"
                     >
-                      <div class="left w-4 h-4 border border-white/45 rounded-[50%] text-4xl">
-                        +
+                      <div
+                        class="left w-8 h-8 flex items-center justify-center"
+                      >
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44771 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                              fill="#ffffff70"
+                            />
+                          </g>
+                        </svg>
                       </div>
                       <div class="right">
-                        <div class="text-white/70 font-bold mb-1.5">
-                         Add Balance
+                        <div class="text-white/70 font-bold leading-8">
+                          Add Balance
                         </div>
                       </div>
                     </div>
                     <div
-                      class="collapse-content bg-[#15171e] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3"
+                      class="collapse-content bg-[#0f1118] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3 h-8"
                     >
-                      <div class="left w-12 h-12">
-                        <img
-                          src="./src/images/mobile-menu/image-1.png"
-                          alt="img-1"
-                        />
+                      <div
+                        class="left w-8 h-8 flex items-center justify-center"
+                      >
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 7V20M12 7H8.46429C7.94332 7 7.4437 6.78929 7.07533 6.41421C6.70695 6.03914 6.5 5.53043 6.5 5C6.5 4.46957 6.70695 3.96086 7.07533 3.58579C7.4437 3.21071 7.94332 3 8.46429 3C11.2143 3 12 7 12 7ZM12 7H15.5357C16.0567 7 16.5563 6.78929 16.9247 6.41421C17.293 6.03914 17.5 5.53043 17.5 5C17.5 4.46957 17.293 3.96086 16.9247 3.58579C16.5563 3.21071 16.0567 3 15.5357 3C12.7857 3 12 7 12 7ZM5 12H19V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V12ZM4.6 12H19.4C19.9601 12 20.2401 12 20.454 11.891C20.6422 11.7951 20.7951 11.6422 20.891 11.454C21 11.2401 21 10.9601 21 10.4V8.6C21 8.03995 21 7.75992 20.891 7.54601C20.7951 7.35785 20.6422 7.20487 20.454 7.10899C20.2401 7 19.9601 7 19.4 7H4.6C4.03995 7 3.75992 7 3.54601 7.10899C3.35785 7.20487 3.20487 7.35785 3.10899 7.54601C3 7.75992 3 8.03995 3 8.6V10.4C3 10.9601 3 11.2401 3.10899 11.454C3.20487 11.6422 3.35785 11.7951 3.54601 11.891C3.75992 12 4.03995 12 4.6 12Z"
+                              stroke="#ffffff70"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
                       </div>
                       <div class="right">
-                        <div class="text-white font-bold mb-1.5">
-                          World of Warcraft
-                        </div>
-                        <div
-                          class="text-[14px] text-white/50 font-[notoRegular]"
-                        >
-                          Massively Multiplayer RPG
+                        <div class="text-white/70 font-bold leading-8">
+                          Gift Balance
                         </div>
                       </div>
                     </div>
                     <div
-                      class="collapse-content bg-[#15171e] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3"
+                      class="collapse-content bg-[#0f1118] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3 h-8"
                     >
-                      <div class="left w-12 h-12">
-                        <img
-                          src="./src/images/mobile-menu/image-1.png"
-                          alt="img-1"
-                        />
+                      <div
+                        class="left w-8 h-8 flex items-center justify-center"
+                      >
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.01112 11.5747L6.29288 10.2929C6.68341 9.90236 7.31657 9.90236 7.7071 10.2929C8.09762 10.6834 8.09762 11.3166 7.7071 11.7071L4.7071 14.7071C4.51956 14.8946 4.26521 15 3.99999 15C3.73477 15 3.48042 14.8946 3.29288 14.7071L0.292884 11.7071C-0.0976406 11.3166 -0.0976406 10.6834 0.292884 10.2929C0.683408 9.90236 1.31657 9.90236 1.7071 10.2929L3.0081 11.5939C3.22117 6.25933 7.61317 2 13 2C18.5229 2 23 6.47715 23 12C23 17.5228 18.5229 22 13 22C9.85817 22 7.05429 20.5499 5.22263 18.2864C4.87522 17.8571 4.94163 17.2274 5.37096 16.88C5.80028 16.5326 6.42996 16.599 6.77737 17.0283C8.24562 18.8427 10.4873 20 13 20C17.4183 20 21 16.4183 21 12C21 7.58172 17.4183 4 13 4C8.72441 4 5.23221 7.35412 5.01112 11.5747ZM13 5C13.5523 5 14 5.44772 14 6V11.5858L16.7071 14.2929C17.0976 14.6834 17.0976 15.3166 16.7071 15.7071C16.3166 16.0976 15.6834 16.0976 15.2929 15.7071L12.2929 12.7071C12.1054 12.5196 12 12.2652 12 12V6C12 5.44772 12.4477 5 13 5Z"
+                              fill="#ffffff70"
+                            />
+                          </g>
+                        </svg>
                       </div>
                       <div class="right">
-                        <div class="text-white font-bold mb-1.5">
-                          World of Warcraft
-                        </div>
-                        <div
-                          class="text-[14px] text-white/50 font-[notoRegular]"
-                        >
-                          Massively Multiplayer RPG
+                        <div class="text-white/70 font-bold leading-8">
+                          Balance History
                         </div>
                       </div>
                     </div>
                     <div
-                      class="collapse-content bg-[#15171e] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3"
+                      class="collapse-content bg-[#0f1118] p-3 hover:bg-white/5 flex flex-row flex-wrap gap-3 h-8"
                     >
-                      <div class="left w-12 h-12">
-                        <img
-                          src="./src/images/mobile-menu/image-1.png"
-                          alt="img-1"
-                        />
+                      <div
+                        class="left w-8 h-8 flex items-center justify-center"
+                      >
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              d="M13.5 18C13.5 18.8284 12.8284 19.5 12 19.5C11.1716 19.5 10.5 18.8284 10.5 18C10.5 17.1716 11.1716 16.5 12 16.5C12.8284 16.5 13.5 17.1716 13.5 18Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              d="M11 12V14C11 14 11 15 12 15C13 15 13 14 13 14V12C13 12 13.4792 11.8629 13.6629 11.7883C13.6629 11.7883 13.9969 11.6691 14.2307 11.4896C14.4646 11.3102 14.6761 11.097 14.8654 10.8503C15.0658 10.6035 15.2217 10.3175 15.333 9.99221C15.4443 9.66693 15.5 9.4038 15.5 9C15.5 8.32701 15.3497 7.63675 15.0491 7.132C14.7596 6.61604 14.3476 6.21786 13.8132 5.93745C13.2788 5.64582 12.6553 5.5 11.9427 5.5C11.4974 5.5 11.1021 5.55608 10.757 5.66825C10.4118 5.7692 10.1057 5.9094 9.83844 6.08887C9.58236 6.25712 9.36525 6.4478 9.18711 6.66091C9.02011 6.86281 8.8865 7.0591 8.78629 7.24978C8.68609 7.44046 8.61929 7.6087 8.58589 7.75452C8.51908 7.96763 8.49125 8.14149 8.50238 8.27609C8.52465 8.41069 8.59145 8.52285 8.70279 8.61258C8.81413 8.70231 8.9867 8.79765 9.22051 8.8986C9.46546 8.97712 9.65473 9.00516 9.78834 8.98273C9.93308 8.96029 10.05 8.89299 10.1391 8.78083C10.1391 8.78083 10.6138 8.10569 10.7474 7.97109C10.8922 7.82528 11.0703 7.71312 11.2819 7.6346C11.4934 7.54487 11.7328 7.5 12 7.5C12.579 7.5 13.0076 7.64021 13.286 7.92062C13.5754 8.18982 13.6629 8.41629 13.6629 8.93225C13.6629 9.27996 13.6017 9.56038 13.4792 9.77349C13.3567 9.9866 13.1953 10.1605 12.9949 10.2951C12.9949 10.2951 12.7227 10.3991 12.5 10.5C12.2885 10.5897 11.9001 10.7381 11.6997 10.8503C11.5104 10.9512 11.4043 11.0573 11.2819 11.2144C11.1594 11.3714 11 11.7308 11 12Z"
+                              fill="#ffffff70"
+                            />
+                          </g>
+                        </svg>
                       </div>
                       <div class="right">
-                        <div class="text-white font-bold mb-1.5">
-                          World of Warcraft
-                        </div>
-                        <div
-                          class="text-[14px] text-white/50 font-[notoRegular]"
-                        >
-                          Massively Multiplayer RPG
+                        <div class="text-white/70 font-bold leading-8">
+                          Balance Help
                         </div>
                       </div>
                     </div>
@@ -1031,8 +1118,249 @@
                 </div>
               </div>
             </div>
+            <div class="top_right w-12 h-12">
+              <div
+                class="person w-10 h-10 hover:bg-white/5 rounded-[5px] flex items-center justify-center m-2"
+              >
+                <img src="./src/images/person.png" alt="person" />
+              </div>
+              <div
+                class="right_menu z-10 w-[89%] h-screen absolute top-0 -right-full transition-all duration-300 bg-[#1A1C23]"
+              >
+                <div>
+                  <div
+                    class="close_right w-10 h-10 rounded-[5px] bg-[#424F6995] hover:bg-[#424F69] m-2 flex items-center justify-center absolute right-0"
+                  >
+                    <svg
+                      width="22px"
+                      height="22px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z"
+                          fill="#fafafa"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-[350.93px] h-12 bg-[#0074e0] rounded-[5px] hover:bg-[#47A6FF] duration-200 transition-all mt-20 mx-auto text-center leading-12 text-[16px] font-[objectBold] text-white"
+                >
+                  <p>Log In</p>
+                </div>
+                <div
+                  class="flex flex-col flex-wrap w-[378.93px] mx-auto mt-[18px] mb-5"
+                >
+                  <div
+                    class="w-full h-[48.52px] hover:bg-white/5 rounded-[5px]"
+                  >
+                    <p
+                      class="font-[notoBold] text-[18px] text-white leading-[48.52px] ml-3.5"
+                    >
+                      Account Settings
+                    </p>
+                  </div>
+                  <div
+                    class="w-full h-[48.52px] hover:bg-white/5 rounded-[5px]"
+                  >
+                    <p
+                      class="font-[notoBold] text-[18px] text-white leading-[48.52px] ml-3.5"
+                    >
+                      Wish List
+                    </p>
+                  </div>
+                  <div
+                    class="w-full h-[48.52px] hover:bg-white/5 rounded-[5px]"
+                  >
+                    <p
+                      class="font-[notoBold] text-[18px] text-white leading-[48.52px] ml-3.5"
+                    >
+                      Redeem code
+                    </p>
+                  </div>
+                  <div
+                    class="w-full h-[48.52px] hover:bg-white/5 rounded-[5px]"
+                  >
+                    <p
+                      class="font-[notoBold] text-[18px] text-white leading-[48.52px] ml-3.5"
+                    >
+                      Change BatttleTag
+                    </p>
+                  </div>
+                </div>
+                <div class="w-full h-[233.57px] bg-[#22242C] overflow-hidden">
+                  <div class="mt-2">
+                    <div
+                      class="w-[374.93px] h-[48.5px] hover:bg-white/5 rounded-[5px] mx-auto flex flex-row flex-wrap gap-3"
+                    >
+                      <div class="left my-3 ml-3">
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              d="M13.5 18C13.5 18.8284 12.8284 19.5 12 19.5C11.1716 19.5 10.5 18.8284 10.5 18C10.5 17.1716 11.1716 16.5 12 16.5C12.8284 16.5 13.5 17.1716 13.5 18Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              d="M11 12V14C11 14 11 15 12 15C13 15 13 14 13 14V12C13 12 13.4792 11.8629 13.6629 11.7883C13.6629 11.7883 13.9969 11.6691 14.2307 11.4896C14.4646 11.3102 14.6761 11.097 14.8654 10.8503C15.0658 10.6035 15.2217 10.3175 15.333 9.99221C15.4443 9.66693 15.5 9.4038 15.5 9C15.5 8.32701 15.3497 7.63675 15.0491 7.132C14.7596 6.61604 14.3476 6.21786 13.8132 5.93745C13.2788 5.64582 12.6553 5.5 11.9427 5.5C11.4974 5.5 11.1021 5.55608 10.757 5.66825C10.4118 5.7692 10.1057 5.9094 9.83844 6.08887C9.58236 6.25712 9.36525 6.4478 9.18711 6.66091C9.02011 6.86281 8.8865 7.0591 8.78629 7.24978C8.68609 7.44046 8.61929 7.6087 8.58589 7.75452C8.51908 7.96763 8.49125 8.14149 8.50238 8.27609C8.52465 8.41069 8.59145 8.52285 8.70279 8.61258C8.81413 8.70231 8.9867 8.79765 9.22051 8.8986C9.46546 8.97712 9.65473 9.00516 9.78834 8.98273C9.93308 8.96029 10.05 8.89299 10.1391 8.78083C10.1391 8.78083 10.6138 8.10569 10.7474 7.97109C10.8922 7.82528 11.0703 7.71312 11.2819 7.6346C11.4934 7.54487 11.7328 7.5 12 7.5C12.579 7.5 13.0076 7.64021 13.286 7.92062C13.5754 8.18982 13.6629 8.41629 13.6629 8.93225C13.6629 9.27996 13.6017 9.56038 13.4792 9.77349C13.3567 9.9866 13.1953 10.1605 12.9949 10.2951C12.9949 10.2951 12.7227 10.3991 12.5 10.5C12.2885 10.5897 11.9001 10.7381 11.6997 10.8503C11.5104 10.9512 11.4043 11.0573 11.2819 11.2144C11.1594 11.3714 11 11.7308 11 12Z"
+                              fill="#ffffff70"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="right">
+                        <p
+                          class="font-[notoBold] text-[18px] text-white leading-[48.5px]"
+                        >
+                          Support
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-[374.93px] h-[48.5px] hover:bg-white/5 rounded-[5px] mx-auto flex flex-row flex-wrap gap-3"
+                    >
+                      <div class="left my-3 ml-3">
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19Z"
+                              fill="#ffffff70"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9.23417 1L9.28281 1.00001C9.2904 1 9.298 1 9.30559 1.00001H14.6944C14.702 1 14.7096 1 14.7172 1.00001L14.7658 1C14.7898 1 14.813 0.999997 14.8357 1.00001H15C15.0164 1.00001 15.0327 1.0004 15.0489 1.00118C15.1351 1.00243 15.2118 1.00496 15.2841 1.01011C17.2693 1.15145 18.8486 2.73075 18.9899 4.71593C19.0001 4.85862 19 5.01839 19 5.23416L19 17.212C19 18.0305 19 18.7061 18.9544 19.2561C18.9069 19.8274 18.805 20.3523 18.5497 20.8439C18.1702 21.5745 17.5745 22.1702 16.8439 22.5497C16.3523 22.805 15.8274 22.9069 15.2561 22.9544C14.7061 23 14.0306 23 13.2121 23H10.7879C9.96946 23 9.29391 23 8.74394 22.9544C8.17259 22.9069 7.64775 22.805 7.15611 22.5497C6.42554 22.1702 5.82986 21.5745 5.45035 20.8439C5.19497 20.3523 5.09311 19.8274 5.04566 19.2561C4.99998 18.7061 4.99999 18.0305 5.00001 17.212L5 5.23417C4.99997 5.0184 4.99995 4.85862 5.01011 4.71593C5.15145 2.73075 6.73075 1.15145 8.71593 1.01011C8.78824 1.00496 8.86493 1.00243 8.95107 1.00118C8.96729 1.0004 8.9836 1.00001 9.00001 1.00001H9.16434C9.18696 0.999997 9.21023 1 9.23417 1ZM9.27151 3.00001C9.00219 3.00001 8.91996 3.00064 8.85797 3.00506C7.86538 3.07573 7.07573 3.86538 7.00506 4.85797C7.00064 4.91996 7.00001 5.00219 7.00001 5.27151V17.17C7.00001 18.041 7.00081 18.6331 7.0388 19.0906C7.07579 19.536 7.1428 19.7634 7.22518 19.922C7.41493 20.2872 7.71277 20.5851 8.07806 20.7748C8.23664 20.8572 8.46402 20.9242 8.90946 20.9612C9.36687 20.9992 9.95899 21 10.83 21H13.17C14.041 21 14.6331 20.9992 15.0906 20.9612C15.536 20.9242 15.7634 20.8572 15.922 20.7748C16.2872 20.5851 16.5851 20.2872 16.7748 19.922C16.8572 19.7634 16.9242 19.536 16.9612 19.0906C16.9992 18.6331 17 18.041 17 17.17V5.27151C17 5.00219 16.9994 4.91996 16.995 4.85797C16.9243 3.86538 16.1346 3.07573 15.142 3.00506C15.0801 3.00064 14.9978 3.00001 14.7285 3.00001C14.6616 3.00001 14.6541 3.00017 14.6491 3.00037C14.5206 3.00524 14.3989 3.05943 14.3094 3.15168C14.3058 3.1553 14.3007 3.16075 14.256 3.21046L13.7673 3.75343L13.7548 3.76722C13.7489 3.77362 13.7374 3.78609 13.7227 3.80087C13.6914 3.83231 13.6352 3.88538 13.5553 3.93802C13.4595 4.00108 13.3541 4.04803 13.2432 4.07701C13.1506 4.1012 13.0735 4.10751 13.0293 4.1097C13.0084 4.11073 12.9914 4.11096 12.9828 4.11104L12.9642 4.11112H11.0359L11.0172 4.11104C11.0086 4.11096 10.9916 4.11073 10.9708 4.1097C10.9265 4.10751 10.8494 4.1012 10.7568 4.07701C10.6459 4.04803 10.5405 4.00108 10.4447 3.93802C10.3648 3.88538 10.3086 3.83231 10.2773 3.80087C10.2627 3.78609 10.2511 3.77362 10.2452 3.76722L10.2327 3.75343L9.74405 3.21046C9.69932 3.16075 9.69418 3.1553 9.69066 3.15168C9.60108 3.05943 9.47941 3.00524 9.35092 3.00037C9.34587 3.00017 9.33838 3.00001 9.27151 3.00001Z"
+                              fill="#ffffff70"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="right">
+                        <p
+                          class="font-[notoBold] text-[18px] text-white leading-[48.5px]"
+                        >
+                          Battle.net Mobile App
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-[374.93px] h-[48.5px] hover:bg-white/5 rounded-[5px] mx-auto flex flex-row flex-wrap gap-3"
+                    >
+                      <div class="left my-3 ml-3">
+                        <svg
+                          fill="#ffffff70"
+                          width="28px"
+                          height="28px"
+                          viewBox="-6.5 0 32 32"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+
+                          <g id="SVGRepo_iconCarrier">
+                            <title>pencil</title>
+                            <path
+                              d="M19.28 10.32c0-0.24-0.080-0.44-0.24-0.6l-3.12-3.12c-0.32-0.32-0.84-0.32-1.2 0l-2.36 2.36-11.32 11.36c-0.12 0.12-0.2 0.28-0.24 0.44l-0.8 3.92c-0.040 0.28 0.040 0.56 0.24 0.76 0.16 0.16 0.36 0.24 0.6 0.24 0.040 0 0.12 0 0.16 0l3.92-0.8c0.16-0.040 0.32-0.12 0.44-0.24l13.68-13.68c0.16-0.2 0.24-0.4 0.24-0.64zM4.32 23.24l-2.44 0.48 0.52-2.4 10.56-10.56 1.92 1.92-10.56 10.56zM16.080 11.52l-1.92-1.92 1.2-1.2 1.92 1.92-1.2 1.2z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="right">
+                        <p
+                          class="font-[notoBold] text-[18px] text-white leading-[48.5px]"
+                        >
+                          Create Account
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="header_bottom"></div>
+          <div class="header_bottom w-full mt-5">
+            <div class="search group w-[427.1px] h-[60.18px] mx-auto">
+              <label class="input w-full h-full bg-white/5 border-0 outline-0 outline-offset-0 hover:bg-white/12 transition-all duration-250">
+                <svg
+                  width="24px"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+                <input class="placeholder:text-white/50 placeholder:text-[14px] font-[notoBold] hover:placeholder:text-white transition-all duration-250 focus:placeholder:text-white text-white text-[15px]" type="search" required placeholder="Search Shop" />
+              </label>
+            </div>
+          </div>
         </div>
       </div>
       <!-- #endregion header -->
@@ -1049,6 +1377,16 @@
       close.addEventListener("click", () => {
         menuMobile.classList.remove("!left-0");
         menuMobile.classList.add("!-left-full");
+      });
+      let person = document.querySelector(".person");
+      let close_right = document.querySelector(".close_right");
+      let right_menu = document.querySelector(".right_menu");
+      person.addEventListener("click", () => {
+        right_menu.classList.add("!right-0");
+      });
+      close_right.addEventListener("click", () => {
+        right_menu.classList.remove("!right-0");
+        right_menu.classList.add("!-right-full");
       });
     </script>
   </body>
