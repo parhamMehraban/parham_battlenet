@@ -17,8 +17,8 @@
       <!-- #region header -->
       <div class="header w-full fixed lg:static lg:hidden">
         <div class="header_center w-full h-full mx-auto">
-          <div class="header_top flex flex-row flex-wrap">
-            <div class="top_left h-12 w-12 mr-[280px]">
+          <div class="header_top flex flex-row flex-wrap justify-between">
+            <div class="top_left h-12 w-12">
               <div
                 class="hamburger w-10 h-10 hover:bg-white/5 m-2 rounded-[5px] flex items-center justify-center"
               >
@@ -1120,7 +1120,7 @@
             </div>
             <div class="top_right w-12 h-12">
               <div
-                class="person w-10 h-10 hover:bg-white/5 rounded-[5px] flex items-center justify-center m-2"
+                class="person w-10 h-10 hover:bg-white/5 rounded-[5px] flex items-center justify-center mr-10 my-2"
               >
                 <img src="./src/images/person.png" alt="person" />
               </div>
@@ -1330,7 +1330,7 @@
             </div>
           </div>
           <div class="header_bottom w-full mt-5">
-            <div class="search group w-[365.1px] h-[60.18px] mx-auto">
+            <div class="search group w-[95%] h-[60.18px] mx-auto">
               <label
                 class="input w-full h-full bg-white/5 border-0 outline-0 outline-offset-0 hover:bg-white/12 transition-all duration-250"
               >
@@ -1372,7 +1372,7 @@
       </div>
       <!-- #region topHeader -->
       <div
-        class="hidden w-[97%] h-16 mx-auto lg:flex flex-row flex-wrap justify-between"
+        class="max-w-[1400px] hidden w-[97%] h-16 mx-auto lg:flex flex-row flex-wrap justify-between"
       >
         <div class="topHeaderLeft w-[40%] h-full">
           <div class="h-full flex items-center cursor-pointer">
@@ -1384,7 +1384,7 @@
           </div>
         </div>
         <div
-          class="topHeaderRight w-[58%] h-full flex flex-row-reverse flex-wrap items-center gap-3"
+          class="topHeaderRight w-[58%] h-full flex flex-row-reverse flex-wrap items-center"
         >
           <div class="w-[177.38px]">
             <button
@@ -1580,10 +1580,59 @@
             </div>
           </div>
         </div>
-        <div class="bottomHeader hidden lg:block w-full bg-amber-400">
-          <div class=" w-[1020.98px] h-14 bg-[#23252B] rounded-[5px]"></div>
-          <div></div>
-          <div></div>
+        <div
+          class="bottomHeader max-w-[1400px] hidden w-full lg:flex flex-row flex-wrap gap-2"
+        >
+          <div class="w-[1050.98px] h-14 bg-[#23252B] rounded-[5px]"></div>
+          <div
+            class="w-15 h-14 bg-[#23252b] flex justify-center items-center rounded-[5px] hover:bg-[#303237]"
+          >
+            <svg
+              width="28px"
+              height="28px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
+          <!-- w-[197.02px] h-14 shadow-none border-none outline-offset-none outline-none bg-[#23252b] text-[#ffffffb8] font-[notoBold] text-[14px] hover:bg-[#303237] hover:text-white -->
+          <div class="">
+            
+            <button
+              class="btn w-[197.02px] h-14 shadow-none border-none outline-offset-none outline-none bg-[#23252b] text-[#ffffffb8] font-[notoBold] text-[14px] hover:bg-[#303237] hover:text-white"
+              popovertarget="popover-1"
+              style="anchor-name: --anchor-1"
+            >
+              Button
+            </button>
+            <ul
+              class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+              popover
+              id="popover-1"
+              style="position-anchor: --anchor-1"
+            >
+              <li><a>Item 1</a></li>
+              <li><a>Item 2</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- #endregion topHeader -->
