@@ -1,0 +1,3585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Blizzard Entertainment</title>
+    <link
+      rel="shortcut icon"
+      href="./images/about/blizz.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/output.css" />
+
+    <style>
+      /* Light-mode overrides (only apply when html does NOT have .dark) */
+      html:not(.dark) [class*="bg-[#23252B]"] {
+        background-color: #ffffff !important;
+      }
+      html:not(.dark) [class*="bg-[#15171E]"] {
+        background-color: #f7f9fb !important;
+      }
+      html:not(.dark) [class*="bg-[#1A1C23]"] {
+        background-color: #ffffff !important;
+      }
+      html:not(.dark) [class*="bg-[#1c1d23]"] {
+        background-color: #ffffff !important;
+      }
+      html:not(.dark) [class*="bg-[#0f1014]"] {
+        background-color: #ffffff !important;
+      }
+      html:not(.dark) [class*="bg-[#131417]"] {
+        background-color: #f7f9fb !important;
+      }
+      html:not(.dark) [class*="bg-[#131928]"] {
+        background-color: #f7f9fb !important;
+      }
+      html:not(.dark) [class*="bg-black/70"] {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+      }
+      html:not(.dark) [class*="bg-gray-800"] {
+        background-color: #e5e7eb !important;
+      }
+      html:not(.dark) [class*="hover:bg-[#303237]"]:hover,
+      html:not(.dark) [class*="hover:bg-[#212329]"]:hover {
+        background-color: #e6e9ee !important;
+      }
+      html:not(.dark) [class*="text-[#C4C5C7]"] {
+        color: #111827 !important;
+      }
+      html:not(.dark) [class*="text-white"] {
+        color: #111827 !important;
+      }
+      html:not(.dark) [class*="group-hover:text-white"] {
+        color: #111827 !important;
+      }
+      html:not(.dark) [class*="border-[#15171E]"] {
+        border-color: #e6e9ee !important;
+      }
+      html:not(.dark) svg path[fill="#C4C5C7"] {
+        fill: #374151 !important;
+      }
+      html:not(.dark) svg path[stroke="#C4C5C7"] {
+        stroke: #374151 !important;
+      }
+
+      /* Theme toggle button visibility and contrast */
+      html:not(.dark) .moon {
+        background-color: #111827 !important; /* strong dark button on light bg */
+        color: #ffffff !important; /* icons use currentColor */
+        padding: 6px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 10px 30px rgba(17, 24, 39, 0.12) !important;
+      }
+      html.dark .moon {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.06
+        ) !important; /* subtle in dark mode */
+        color: #ffffff !important;
+        padding: 6px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+      }
+      /* ensure svg icons inherit color */
+      .moon svg {
+        color: inherit;
+      }
+
+      /* Additional text/icon overrides to improve contrast in light mode */
+      html:not(.dark) .text-white {
+        color: #111827 !important;
+      }
+      html:not(.dark) [class*="text-[#FFFFFF]"] {
+        color: #111827 !important;
+      }
+      html:not(.dark) [class*="text-gray-200"] {
+        color: #6b7280 !important;
+      }
+      html:not(.dark) [class*="text-gray"] {
+        color: #4b5563 !important;
+      }
+      html:not(.dark) svg path[fill="white"] {
+        fill: #374151 !important;
+      }
+      html:not(.dark) svg [fill="white"] {
+        fill: #374151 !important;
+      }
+      html:not(.dark) svg path[stroke="white"] {
+        stroke: #374151 !important;
+      }
+
+      /* Search boxes: slightly darker in light mode for better contrast */
+      html:not(.dark) .search-m,
+      html:not(.dark) .search,
+      html:not(.dark) .search1 {
+        background-color: #e6e9ee !important;
+        color: #111827 !important;
+      }
+      html:not(.dark) .search-m .input,
+      html:not(.dark) .search .input,
+      html:not(.dark) .search1 .input,
+      html:not(.dark) .input {
+        background-color: #e6e9ee !important;
+        color: #111827 !important;
+      }
+
+      /* Sticky headers/containers: ensure they have a visible box in light mode */
+      html:not(.dark) .header-m,
+      html:not(.dark) .header-menu {
+        background-color: rgba(255, 255, 255, 0.96) !important;
+        border-bottom: 1px solid #e6e9ee !important;
+        box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04) !important;
+        backdrop-filter: blur(6px) !important;
+      }
+
+      /* Ensure html & body match light/dark mode across the full viewport */
+      html:not(.dark),
+      html:not(.dark) body {
+        background-color: #f7f9fb !important;
+        color-scheme: light !important;
+      }
+      html.dark,
+      html.dark body {
+        background-color: #15171e !important;
+        color-scheme: dark !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="wrapper desktop:w-[100%] mobile:w-[100%] flex flex-col justify-center m-auto items-center h-full dark:bg-[#1E201E] bg-[#131928] text-[#C4C5C7] desktop:max-w-[1500px] mx-auto"
+    >
+      <!-- #region  mobile-header -->
+      <div
+        class="header-m desktop:hidden max-w-[1024px] mx-auto m-0 flex flex-wrap flex-col items-center justify-between gap-3 bg-black/70 text-[#C4C5C7] dark:bg-[#1E201E] fixed top-0 z-40"
+      >
+        <div
+          class="top w-[95%] flex flex-wrap items-center my-2 justify-between"
+        >
+          <div class="menu-m w-[20%]">
+            <div class="navbar-start flex w-full">
+              <button
+                id="menu-btn"
+                class="btn btn-ghost p-2 hover:bg-[#23252B] border-none shadow-none lg:hidden"
+              >
+                <svg
+                  width="30px"
+                  height="30px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M4 6H20M4 12H20M4 18H20"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+
+              <div
+                id="side-menu"
+                class="fixed top-0 left-0 h-full w-[80%] dark:bg-[#1E201E] bg-[#131928] text-[#fffff] shadow-lg transform -translate-x-full overflow-scroll transition-transform duration-300 z-20"
+              >
+                <div class="menu-head flex w-full mt-[20px]">
+                  <button
+                    id="side-btn"
+                    class="btn bg-[#131928] hover:bg-[#23252B] shadow-none border-none lg:hidden"
+                  >
+                    <img src="./images/menu-m/back.svg" alt="" />
+                  </button>
+                  <div class="logo flex items-center w-[70%]">
+                    <a href="#" class="flex items-center justify-center">
+                      <img
+                        class="w-[30%]"
+                        src="./images/about/blizz_blue_logo.png"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="menu-body">
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content dark:bg-[#3C3D37] bg-[#131928] text-[#ffffff] rounded-box mobile:z-1 mobile:mt-3 mobile:w-full mobile:p-2 shadow"
+                  >
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center hover:bg-[#272930] cursor-pointer"
+                        >
+                          Warcraft
+                        </summary>
+                        <ul
+                          class="ml-0 flex flex-col gap-2 p-2 w-full bg-[#0f1014]"
+                        >
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-1.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  World of Warcraft
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center text-gray-400 h-[50%]"
+                                >
+                                  Massively Multiplayer RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-2.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[17px]"
+                                >
+                                  World of Warcraft Classic
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Massively Multiplayer RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-3.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Warcraft Rumble
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action Strategy
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-5.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Warcraft
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Real-time Strategy
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                    <!-- ----- -->
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center hover:bg-[#272930] cursor-pointer"
+                        >
+                          Diablo
+                        </summary>
+                        <ul
+                          class="m-0 p-0 flex flex-col gap-2 w-full bg-[#131417]"
+                        >
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-6.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Diablo IV
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center text-gray-400 h-[50%]"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-7.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Diablo Immortal
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-8.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Diablo III
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-9.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Diablo II: Resurrected
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-10.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Diablo
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                    <!-- ----- -->
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center hover:bg-[#272930] cursor-pointer"
+                        >
+                          Overwatch
+                        </summary>
+                        <ul
+                          class="m-0 p-0 flex flex-col justify-center items-center gap-2 w-full bg-[#131417]"
+                        >
+                          <li
+                            class="flex flex-row justify-center items-center flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-11.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Overwatch 2
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Team-Based Action Game
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                    <!-- ----- -->
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center cursor-pointer hover:bg-[#272930]"
+                        >
+                          StarCraft
+                        </summary>
+                        <ul
+                          class="ml-0 flex flex-col gap-2 p-2 w-full bg-[#131417]"
+                        >
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-13.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  StarCraft II
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Real-time Strategy
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-12.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  StarCraft
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Real-time Strategy
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                    <!-- ----- -->
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center hover:bg-[#272930]"
+                        >
+                          Call of Duty
+                        </summary>
+                        <ul
+                          class="m-0 p-0 flex flex-col gap-2 w-full bg-[#131417]"
+                        >
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-14.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Black Ops7
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-15.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Black Ops6
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-16.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Warzone
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-17.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Modern Wafere III
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-18.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Modern Wafere II
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-19.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Vanguard
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-20.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Black Ops Cold war
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-21.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Modern Wafere
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-22.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div
+                                  class="text-[#FFFFFF] h-[50%] flex items-center text-[18px]"
+                                >
+                                  Modern Wafere 2
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap h-[65px]">
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure
+                                class="w-[17%] h-full flex items-center justify-center"
+                              >
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-24.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Black Ops 4
+                                </div>
+                                <div
+                                  class="text-[16px] flex items-center h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                    <!-- ----- -->
+                    <li>
+                      <details>
+                        <summary
+                          class="w-full h-[50px] text-[20px] flex font-[DMsans] font-semibold items-center cursor-pointer hover:bg-[#272930]"
+                        >
+                          more
+                        </summary>
+                        <ul
+                          class="m-0 p-0 flex flex-col gap-2 w-full bg-[#131417]"
+                        >
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-25.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Avowed
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  First-person Fantasy RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-26.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Blizzard Arcade Collection
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Bundle
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-27.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Crash Bandicoot4
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Platformer
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-28.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Doom: The Dark ages
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Action shooter
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-29.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Heroes Of The Storm
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  MOBA
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-30.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  Sea Of Thieves
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Action Adventure
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-31.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[18px]">
+                                  The Outer Worlds 2
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Action RPG
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex flex-row flex-wrap h-[65px] cursor-pointer"
+                          >
+                            <div
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                            >
+                              <figure class="w-[17%] h-full">
+                                <img
+                                  class="w-full"
+                                  src="/battlenet/images/menu/img-32.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="font-[DMsans] gap-0 h-full flex flex-col p-0 w-[85%]"
+                              >
+                                <div class="text-[#FFFFFF] h-[50%] text-[16px]">
+                                  Tony Hawk’s Pro Skater 3 + 4
+                                </div>
+                                <div
+                                  class="text-[16px] items-end h-[50%] text-gray-400"
+                                >
+                                  Extreme Action Sports
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </div>
+                <li>
+                  <details>
+                    <summary
+                      class="w-full h-[50px] text-[17px] font-semibold flex p-3 text-white font-[DMsans] items-center hover:bg-[#272930] cursor-pointer"
+                    >
+                      Heroes Of the Storm
+                    </summary>
+                  </details>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="logo-m flex items-center justify-center w-[60%]">
+            <a href="#" class="flex items-center justify-center">
+              <img
+                class="w-[30%]"
+                src="./images/about/blizz_blue_logo.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="info-m w-[20%]">
+            <div class="navbar-end flex w-full">
+              <button
+                id="menu1-btn"
+                class="btn btn-ghost p-2 border-none shadow-none hover:bg-[#23252B] lg:hidden"
+              >
+                <img src="./images/menu-m/person.svg" alt="" />
+              </button>
+
+              <div
+                id="side1-menu"
+                class="fixed top-0 right-0 h-full w-[80%] dark:bg-[#1E201E] bg-[#131928] text-[#fffff] shadow-lg transform translate-x-full overflow-scroll transition-transform duration-300 z-20"
+              >
+                <div
+                  class="menu-head flex items-center justify-end w-full mt-[20px]"
+                >
+                  <div class="logo flex items-center w-[70%]">
+                    <a href="#" class="flex justify-center items-center">
+                      <img
+                        class="w-[30%]"
+                        src="./images/about/blizz_blue_logo.png"
+                        alt=""
+                    /></a>
+                  </div>
+                  <button
+                    id="side1-btn"
+                    class="btn bg-[#23252B] hover:bg-[#23252B] shadow-none border-none lg:hidden"
+                  >
+                    <img src="./images/menu-m/back.svg" alt="" />
+                  </button>
+                </div>
+                <div class="menu-body">
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content dark:bg-[#3C3D37] bg-[#191b23] text-[#ffffff] rounded-box mobile:z-1 mobile:mt-3 mobile:w-full mobile:p-2 shadow"
+                  >
+                    <li class="flex flex-row flex-wrap">
+                      <div
+                        class="card w-[100%] h-[70px] items-center justify-center flex flex-row"
+                      >
+                        <a
+                          href="./index2.html"
+                          class="w-[100%] h-[100%] flex items-center justify-center"
+                        >
+                          <button
+                            class="btn btn-primary shadow-none btn-xl text-[16px] h-[80%] w-[95%] font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
+                          >
+                            Log In
+                          </button>
+                        </a>
+                      </div>
+                    </li>
+                    <!-- ----- -->
+                    <li class="flex flex-row flex-wrap pl-2">
+                      <div
+                        class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:bg-[#37393f]"
+                      >
+                        <figure class="w-[7%] h-[100%]">
+                          <svg
+                            fill="#C4C5C7"
+                            width="30px"
+                            height="30px"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <title>Account Settings</title>
+                              <path
+                                d="M9.6,3.32a3.86,3.86,0,1,0,3.86,3.85A3.85,3.85,0,0,0,9.6,3.32M16.35,11a.26.26,0,0,0-.25.21l-.18,1.27a4.63,4.63,0,0,0-.82.45l-1.2-.48a.3.3,0,0,0-.3.13l-1,1.66a.24.24,0,0,0,.06.31l1,.79a3.94,3.94,0,0,0,0,1l-1,.79a.23.23,0,0,0-.06.3l1,1.67c.06.13.19.13.3.13l1.2-.49a3.85,3.85,0,0,0,.82.46l.18,1.27a.24.24,0,0,0,.25.2h1.93a.24.24,0,0,0,.23-.2l.18-1.27a5,5,0,0,0,.81-.46l1.19.49c.12,0,.25,0,.32-.13l1-1.67a.23.23,0,0,0-.06-.3l-1-.79a4,4,0,0,0,0-.49,2.67,2.67,0,0,0,0-.48l1-.79a.25.25,0,0,0,.06-.31l-1-1.66c-.06-.13-.19-.13-.31-.13L19.5,13a4.07,4.07,0,0,0-.82-.45l-.18-1.27a.23.23,0,0,0-.22-.21H16.46M9.71,13C5.45,13,2,14.7,2,16.83v1.92h9.33a6.65,6.65,0,0,1,0-5.69A13.56,13.56,0,0,0,9.71,13m7.6,1.43a1.45,1.45,0,1,1,0,2.89,1.45,1.45,0,0,1,0-2.89Z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </figure>
+                        <div
+                          class="card-body gap-0 items-start h-[60%] flex p-0 w-[93%]"
+                        >
+                          <h6
+                            class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px]"
+                          >
+                            Account Setting
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- ----- -->
+                    <li class="flex flex-row flex-wrap pl-2 pr-2">
+                      <div
+                        class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#37393f]"
+                      >
+                        <figure class="w-[7%] h-[100%]">
+                          <svg
+                            fill="#C4C5C7"
+                            width="30px"
+                            height="30px"
+                            viewBox="0 -8 72 72"
+                            id="Layer_1"
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <title>barcode</title>
+                              <path
+                                d="M8,7h7V42H8ZM18.5,7H22V42H18.5Zm7,0H29V42H25.5ZM36,7h3.5V42H36ZM50,7h3.5V42H50ZM60.5,7H64V42H60.5ZM43,7h1.75V42H43ZM32.5,7h1.75V42H32.5ZM55.25,7H57V42H55.25ZM8,45.5h3.5V49H8Zm10.5,0H22V49H18.5Zm7,0H29V49H25.5Zm17.5,0h3.5V49H43Zm17.5,0H64V49H60.5ZM50,45.5h7V49H50Zm-17.5,0h7V49h-7V45.5Z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </figure>
+                        <div
+                          class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6
+                            class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px]"
+                          >
+                            Sign Up
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- ----- -->
+                  </ul>
+                </div>
+                <li class="flex flex-row flex-wrap pb-2 mx-2">
+                  <div
+                    class="card w-[100%] h-[50px] flex flex-row items-center justify-center shadow-sm hover:bg-[#37393f]"
+                  >
+                    <figure class="w-[10%] h-[100%]">
+                      <svg
+                        class="mr-2"
+                        fill="#C4C5C7"
+                        width="30px"
+                        height="30px"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g data-name="Layer 2">
+                            <g data-name="menu-arrow-circle">
+                              <rect
+                                width="24"
+                                height="24"
+                                transform="rotate(180 12 12)"
+                                opacity="0"
+                              ></rect>
+                              <path
+                                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                              ></path>
+                              <path
+                                d="M12 6a3.5 3.5 0 0 0-3.5 3.5 1 1 0 0 0 2 0A1.5 1.5 0 1 1 12 11a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.16A3.49 3.49 0 0 0 12 6z"
+                              ></path>
+                              <circle cx="12" cy="17" r="1"></circle>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </figure>
+                    <div class="card-body gap-0 h-[60%] flex p-0 w-[85%]">
+                      <h6
+                        class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px]"
+                      >
+                        Support
+                      </h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="flex flex-row flex-wrap pb-2 mx-2">
+                  <div
+                    class="card w-[100%] h-[50px] flex flex-row items-center justify-center shadow-sm hover:bg-[#37393f]"
+                  >
+                    <figure class="w-[10%] h-[100%]">
+                      <svg
+                        class="mr-2"
+                        width="30px"
+                        height="30px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path d="M11 3H13V21H11V3Z" fill="#C4C5C7"></path>
+                          <path
+                            d="M5 8C5 7.44771 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z"
+                            fill="#C4C5C7"
+                          ></path>
+                          <path
+                            d="M19 8C19 7.44771 18.5523 7 18 7H15V5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H15V17H18C18.5523 17 19 16.5523 19 16V8Z"
+                            fill="#C4C5C7"
+                          ></path>
+                        </g>
+                      </svg>
+                    </figure>
+                    <div
+                      class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                    >
+                      <h6
+                        class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px]"
+                      >
+                        Change BattleTag
+                      </h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="flex flex-row flex-wrap pb-2 mx-2">
+                  <div
+                    class="card w-[100%] h-[50px] flex flex-row items-center justify-center shadow-sm hover:bg-[#37393f]"
+                  >
+                    <figure class="w-[8%] h-[100%]">
+                      <svg
+                        class="mr-2"
+                        fill="#C4C5C7"
+                        height="40px"
+                        width="40px"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        enable-background="new 0 0 512 512"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g>
+                            <g>
+                              <path
+                                d="M480.6,341.4c-11.3,0-20.4,9.1-20.4,20.4v98.4H51.8v-98.4c0-11.3-9.1-20.4-20.4-20.4c-11.3,0-20.4,9.1-20.4,20.4v118.8 c0,11.3,9.1,20.4,20.4,20.4h449.2c11.3,0,20.4-9.1,20.4-20.4V361.8C501,350.5,491.9,341.4,480.6,341.4z"
+                              ></path>
+                              <path
+                                d="m241,365.6c11.5,11.6 25.6,5.2 29.9,0l117.3-126.2c7.7-8.3 7.2-21.2-1.1-28.9-8.3-7.7-21.2-7.2-28.8,1.1l-81.9,88.1v-265.2c0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4v265.3l-81.9-88.1c-7.7-8.3-20.6-8.7-28.9-1.1-8.3,7.7-8.7,20.6-1.1,28.9l117.3,126.1z"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </figure>
+                    <div
+                      class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                    >
+                      <h6
+                        class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px]"
+                      >
+                        Download Battle.net
+                      </h6>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #region end -->
+
+      <!-- #region header -->
+      <div
+        class="header-menu mobile:hidden desktop:flex dark:bg-[#3C3D37] fixed top-3 z-50 bg-[#2D3042] flex w-[98%] px-[15px] gap-x-2 justify-between rounded-[8px] h-fit items-center desktop:max-w-[1500px] mx-auto"
+      >
+        <div class="logo flex w-[7%] h-fit">
+          <a href="#" class="flex items-center">
+            <img
+              class="w-[90%]"
+              src="./images/about/blizz_blue_logo.png"
+              alt=""
+          /></a>
+        </div>
+        <div
+          class="navbar font-[notoBold] rounded-[5px] w-full flex dark:bg-[#3C3D37] shadow-sm p-0"
+        >
+          <div
+            class="navbar-start leading-[100%] hidden desktop:flex w-full h-fit text-[35px]"
+          >
+            <ul
+              class="menu menu-horizontal justify-start items-center h-fit w-[55%] p-0"
+            >
+              <li
+                class="dropdown relative group rounded-[5px] hover:bg-[#373D52] h-fit"
+              >
+                <a
+                  class="pl-3 h-full w-full text-[18px] gap-0 flex text-[#FFFFFF]"
+                  tabindex="0"
+                  >Warcraft
+                  <img src="/battlenet/images/dd.svg" alt="" />
+                </a>
+                <ul
+                  class="absolute left-[-133px] top-[60px] w-[400px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                >
+                  <li class="flex flex-row flex-wrap">
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row mt-2 mb-1 shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%]"
+                          src="/battlenet/images/menu/img-1.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          World of Warcraft
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Massively Multiplayer RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-2.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          World of Warcraft Classic
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Massively Multiplayer RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-3.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Warcraft Rumble
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action Strategy
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center mb-2"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-5.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Warcraft</h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Real-time Strategy
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <!-------------------------------->
+
+              <li
+                class="dropdown relative group rounded-[5px] hover:bg-[#373D52] h-fit"
+              >
+                <a
+                  class="px-2 pl-4 text-[18px] h-full gap-0 flex text-[#FFFFFF]"
+                  tabindex="0"
+                  >Diablo
+                  <img src="/battlenet/images/dd.svg" alt="" />
+                </a>
+                <ul
+                  class="absolute left-[-133px] top-[60px] w-[400px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                >
+                  <li class="flex flex-row flex-wrap">
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row mt-2 mb-1 shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%]"
+                          src="/battlenet/images/menu/img-6.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Diablo IV
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row hover:bg-[#272930] text-[#FFFFFF] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-7.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Diablo Immortal
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row hover:bg-[#272930] text-[#FFFFFF] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-8.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Diablo III
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row hover:bg-[#272930] text-[#FFFFFF] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-9.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Diablo II: Resurrected
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center mb-2"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row hover:bg-[#272930] text-[#FFFFFF] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-10.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Diablo</h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Action RPG
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <!----------------------------->
+
+              <li
+                class="dropdown relative group rounded-[5px] hover:bg-[#373D52] h-fit"
+              >
+                <a
+                  class="px-2 pl-4 text-[18px] h-full gap-0 text-[#FFFFFF] flex"
+                  tabindex="0"
+                  >Overwatch
+                  <img src="/battlenet/images/dd.svg" alt="" />
+                </a>
+                <ul
+                  class="absolute left-[-133px] top-[60px] w-[400px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                >
+                  <li class="flex flex-row flex-wrap">
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row mt-2 mb-2 shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%]"
+                          src="/battlenet/images/menu/img-11.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Overwatch 2
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Team-Based Action Game
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <!-------------------------->
+
+              <li
+                class="dropdown star1:flex desktop:hidden relative group rounded-[5px] hover:bg-[#373D52] h-fit"
+              >
+                <a
+                  class="pl-4 h-full w-full text-[18px] gap-0 flex text-[#FFFFFF]"
+                  tabindex="0"
+                  >Hearthstone
+                  <img src="/battlenet/images/dd.svg" alt="" />
+                </a>
+                <ul
+                  class="absolute left-[-133px] top-[60px] w-[400px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                >
+                  <li
+                    class="flex flex-row flex-wrap items-center justify-center"
+                  >
+                    <div
+                      class="card w-[100%] h-[80px] mt-1 mb-1 flex flex-row text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%] object-cover"
+                          src="/battlenet/images/menu/img-4.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Hearthstone
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Strategy Card Game
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- -------------------- -->
+
+              <li
+                class="dropdown search1:flex desktop:hidden relative group rounded-[5px] hover:bg-[#373D52] h-fit"
+              >
+                <a
+                  class="px-2 pl-4 text-[18px] h-full gap-0 flex text-[#FFFFFF]"
+                  tabindex="0"
+                  >StarCraft
+                  <img src="/battlenet/images/dd.svg" alt="" />
+                </a>
+                <ul
+                  class="absolute left-[-133px] top-[60px] w-[400px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                >
+                  <li class="flex flex-row flex-wrap">
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row mt-2 mb-1 shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%]"
+                          src="/battlenet/images/menu/img-13.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          StarCraft II
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Real-time Strategy
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row flex-wrap">
+                    <div
+                      class="card w-[100%] h-[80px] flex flex-row mb-1 shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img
+                          class="w-[100%]"
+                          src="/battlenet/images/menu/img-12.png"
+                          alt="Album"
+                        />
+                      </figure>
+                      <div
+                        class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          StarCraft
+                        </h6>
+                        <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                          Real-time Strategy
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- #region bela -->
+              <div class="bela w-[5%] ml-4 h-fit z-100 cursor-pointer">
+                <div class="navbar w-fit rounded-[5px] shadow-sm p-0">
+                  <div class="navbar-start w-fit">
+                    <ul class="menu menu-horizontal w-fit p-0 h-[100%]">
+                      <li
+                        class="dropdown w-fit dark:bg-[#1E201E] bg-[#373D52] flex rounded-[7px] relative group"
+                      >
+                        <a
+                          class="h-[100%] w-fit font-[notoBold] p-2 pl-3 text-[16px] text-[#FFFFFF]"
+                          tabindex="0"
+                        >
+                          <svg
+                            fill="#ffffff"
+                            width="23px"
+                            height="23px"
+                            viewBox="0 0 32 32"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <title>etc</title>
+                              <path
+                                d="M5.5 16c0-1.5-1.25-2.75-2.75-2.75-1.531 0-2.75 1.25-2.75 2.75s1.219 2.75 2.75 2.75c1.5 0 2.75-1.25 2.75-2.75zM13.938 16c0-1.5-1.25-2.75-2.75-2.75s-2.75 1.25-2.75 2.75 1.25 2.75 2.75 2.75 2.75-1.25 2.75-2.75zM22.406 16c0-1.5-1.219-2.75-2.75-2.75-1.5 0-2.75 1.25-2.75 2.75s1.25 2.75 2.75 2.75c1.531 0 2.75-1.25 2.75-2.75z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </a>
+                        <ul
+                          class="absolute right-[-130px] top-[55px] w-[320px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 p-0 z-5"
+                        >
+                          <li class="flex flex-row flex-wrap pl-2 pr-2 mt-3">
+                            <div
+                              class="card w-[100%] h-[80px] flex flex-row justify-baseline items-center hover:bg-[#272930] shadow-sm"
+                            >
+                              <figure class="w-[15%] h-[100%]">
+                                <img
+                                  class="w-[100%] object-cover"
+                                  src="/battlenet/images/menu/img-29.png"
+                                  alt="Album"
+                                />
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                              >
+                                <h6
+                                  class="card-title h-[40%] text-[17px] text-[#FFFFFF]"
+                                >
+                                  Heroes Of The Storm
+                                </h6>
+                                <p class="text-[13px] h-[60%] text-[#8B8F93]">
+                                  MOBA
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap">
+                            <div
+                              class="card w-[100%] h-[80px] items-center justify-center flex flex-row"
+                            >
+                              <a
+                                href="./index2.html"
+                                class="w-[100%] h-[100%] flex items-center justify-center"
+                              >
+                                <button
+                                  class="btn btn-primary shadow-none btn-xl text-[16px] h-[60%] w-[90%] font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
+                                >
+                                  <svg
+                                    fill="#ffffff"
+                                    width="25px"
+                                    height="25px"
+                                    viewBox="0 0 14 14"
+                                    role="img"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <g
+                                      id="SVGRepo_bgCarrier"
+                                      stroke-width="0"
+                                    ></g>
+                                    <g
+                                      id="SVGRepo_tracerCarrier"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M7.6666667 7.666667v4h4.0000003v-4H7.6666667zm0-1.333334V2.3333333h4.0000003V6.333333H7.6666667zM6.3333333 7.666667v4h-4v-4h4zm0-1.333334V2.3333333h-4V6.333333h4zM1 12.333333V1h12v12H1v-.666667z"
+                                      ></path>
+                                    </g>
+                                  </svg>
+                                  Log In
+                                </button>
+                              </a>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- #region end -->
+            </ul>
+
+            <!-- #region left -->
+            <div class="flex justify-end items-center w-[45%] h-fit">
+              <!-- #region about -->
+              <div class="navbar h-fit w-fit rounded-[5px] flex shadow-sm p-0">
+                <div
+                  class="navbar-start w-full desktop:items-center desktop:justify-center desktop:flex h-[100%] desktop:text-[35px]"
+                >
+                  <ul
+                    class="menu menu-horizontal desktop:justify-center mx-auto w-full h-[100%]"
+                  >
+                    <li
+                      class="dropdown px-2 rounded-[5px] hover:bg-[#373D52] w-full relative group"
+                    >
+                      <a
+                        class="h-[100%] w-full flex justify-center items-center gap-0 box-border text-[16px] font-[notoBold] text-[#FFFFFF]"
+                        tabindex="0"
+                        >About
+                        <img src="/battlenet/images/dd.svg" alt="" />
+                      </a>
+                      <ul
+                        class="absolute right-[-130px] top-[63px] w-[350px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                      >
+                        <li class="flex flex-row flex-wrap">
+                          <div
+                            class="card w-[100%] h-[55px] flex flex-row shadow-sm mt-1 text-[#FFFFFF] hover:bg-[#272930]"
+                          >
+                            <figure class="w-[7%] h-[100%]">
+                              <img src="./images/about/blizz.png" alt="" />
+                            </figure>
+                            <div
+                              class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                            >
+                              <h6
+                                class="font-[noto] card-title h-[100%] text-[17px] font-light"
+                              >
+                                About Blizzard
+                              </h6>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex flex-row flex-wrap">
+                          <div
+                            class="card w-[100%] h-[55px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                          >
+                            <figure class="w-[8%] h-[100%]">
+                              <svg
+                                fill="#C4C5C7"
+                                width="45px"
+                                height="45px"
+                                viewBox="-8 0 32 32"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                  id="SVGRepo_tracerCarrier"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <title>paper</title>
+                                  <path
+                                    d="M13.52 5.72h-7.4c-0.36 0-0.56 0.2-0.6 0.24l-5.28 5.28c-0.040 0.040-0.24 0.24-0.24 0.56v12.2c0 1.24 1 2.24 2.24 2.24h11.24c1.24 0 2.24-1 2.24-2.24v-16.040c0.040-1.24-0.96-2.24-2.2-2.24zM5.28 8.56v1.8c0 0.32-0.24 0.56-0.56 0.56h-1.84l2.4-2.36zM14.080 24.040c0 0.32-0.28 0.56-0.56 0.56h-11.28c-0.32 0-0.56-0.28-0.56-0.56v-11.36h3.040c1.24 0 2.24-1 2.24-2.24v-3.040h6.52c0.32 0 0.56 0.24 0.56 0.56l0.040 16.080z"
+                                  ></path>
+                                </g>
+                              </svg>
+                            </figure>
+                            <div
+                              class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                            >
+                              <h6
+                                class="font-[noto] card-title h-[100%] text-[17px] font-light"
+                              >
+                                News
+                              </h6>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex flex-row flex-wrap">
+                          <div
+                            class="card w-[100%] h-[55px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                          >
+                            <figure class="w-[7%] h-[100%]">
+                              <svg
+                                width="35px"
+                                height="35px"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                  id="SVGRepo_tracerCarrier"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path
+                                    d="M14 11C14 10.4477 14.4477 10 15 10C15.5523 10 16 10.4477 16 11V13C16 13.5523 15.5523 14 15 14C14.4477 14 14 13.5523 14 13V11Z"
+                                    stroke="#C4C5C7"
+                                    stroke-width="1.5"
+                                  ></path>
+                                  <path
+                                    d="M14.0079 19.0029L13.2579 19.0007V19.0007L14.0079 19.0029ZM14.0137 17L14.7637 17.0022V17H14.0137ZM3.14958 18.8284L2.61991 19.3594H2.61991L3.14958 18.8284ZM3.14958 5.17157L2.61991 4.64058L2.61991 4.64058L3.14958 5.17157ZM2.95308 10.2537L2.58741 10.9085H2.58741L2.95308 10.2537ZM2.01058 8.98947L1.26124 8.95797L2.01058 8.98947ZM2.95308 13.7463L2.58741 13.0915L2.58741 13.0915L2.95308 13.7463ZM2.01058 15.0105L2.75992 14.979L2.01058 15.0105ZM21.0469 10.2537L21.4126 10.9085L21.0469 10.2537ZM21.9894 8.98947L22.7388 8.95797V8.95797L21.9894 8.98947ZM20.8504 5.17157L21.3801 4.64058L21.3801 4.64058L20.8504 5.17157ZM21.0469 13.7463L20.6812 14.4012V14.4012L21.0469 13.7463ZM21.9894 15.0105L22.7388 15.042V15.042L21.9894 15.0105ZM20.8504 18.8284L21.3801 19.3594L21.3801 19.3594L20.8504 18.8284ZM21.9437 14.332L22.5981 13.9656L22.5981 13.9656L21.9437 14.332ZM21.9437 9.66803L22.5981 10.0344L22.5981 10.0344L21.9437 9.66803ZM2.05634 14.332L1.4019 13.9656L1.4019 13.9656L2.05634 14.332ZM2.05634 9.66802L2.71079 9.30168L2.71078 9.30168L2.05634 9.66802ZM14.0137 7H14.7637L14.7637 6.99782L14.0137 7ZM14.0064 4.49855L13.2564 4.50073V4.50073L14.0064 4.49855ZM16.5278 4.0189L16.5471 3.26915L16.5278 4.0189ZM17.0336 19.9642L17.0653 20.7135H17.0653L17.0336 19.9642ZM13.8595 19.8541L13.3299 19.323L13.3299 19.323L13.8595 19.8541ZM14.7579 19.0051L14.7637 17.0022L13.2637 16.9978L13.2579 19.0007L14.7579 19.0051ZM15.0162 16.75C15.1574 16.75 15.2687 16.8637 15.2687 17H16.7687C16.7687 16.0317 15.9823 15.25 15.0162 15.25V16.75ZM15.0162 15.25C14.0501 15.25 13.2637 16.0317 13.2637 17H14.7637C14.7637 16.8637 14.875 16.75 15.0162 16.75V15.25ZM9.99502 4.75H13.5052V3.25H9.99502V4.75ZM13.0079 19.25H9.99502V20.75H13.0079V19.25ZM9.99502 19.25C8.08355 19.25 6.72521 19.2484 5.69469 19.1102C4.68554 18.9749 4.10384 18.721 3.67925 18.2974L2.61991 19.3594C3.3698 20.1074 4.32051 20.4393 5.4953 20.5969C6.64871 20.7516 8.12585 20.75 9.99502 20.75V19.25ZM9.99502 3.25C8.12585 3.25 6.64871 3.24841 5.4953 3.4031C4.32051 3.56066 3.3698 3.89255 2.61991 4.64058L3.67925 5.70256C4.10384 5.27902 4.68554 5.02513 5.69469 4.88979C6.72521 4.75159 8.08355 4.75 9.99502 4.75V3.25ZM2.58741 10.9085C2.97311 11.1239 3.23007 11.533 3.23007 12H4.73007C4.73007 10.9664 4.1586 10.0678 3.31876 9.59884L2.58741 10.9085ZM2.75992 9.02097C2.83795 7.16494 3.09146 6.28889 3.67925 5.70256L2.61991 4.64058C1.59036 5.66758 1.34012 7.08185 1.26124 8.95797L2.75992 9.02097ZM3.23007 12C3.23007 12.467 2.97311 12.8761 2.58741 13.0915L3.31876 14.4012C4.1586 13.9322 4.73007 13.0336 4.73007 12H3.23007ZM1.26124 15.042C1.34012 16.9182 1.59036 18.3324 2.61991 19.3594L3.67925 18.2974C3.09146 17.7111 2.83795 16.8351 2.75992 14.979L1.26124 15.042ZM20.7699 12C20.7699 11.533 21.0269 11.1239 21.4126 10.9085L20.6812 9.59884C19.8414 10.0678 19.2699 10.9664 19.2699 12H20.7699ZM22.7388 8.95797C22.6599 7.08185 22.4096 5.66758 21.3801 4.64058L20.3207 5.70256C20.9085 6.28889 21.1621 7.16494 21.2401 9.02097L22.7388 8.95797ZM21.4126 13.0915C21.0269 12.8761 20.7699 12.467 20.7699 12H19.2699C19.2699 13.0336 19.8414 13.9322 20.6812 14.4012L21.4126 13.0915ZM21.2401 14.979C21.1621 16.8351 20.9085 17.7111 20.3207 18.2974L21.3801 19.3594C22.4096 18.3324 22.6599 16.9182 22.7388 15.042L21.2401 14.979ZM20.6812 14.4012C20.9652 14.5597 21.1507 14.6636 21.2761 14.7427C21.3379 14.7817 21.3653 14.8024 21.3735 14.8093C21.388 14.8213 21.3375 14.7846 21.2892 14.6983L22.5981 13.9656C22.5153 13.8177 22.4043 13.7154 22.3304 13.6542C22.2503 13.5878 22.1613 13.5276 22.0764 13.4741C21.9087 13.3683 21.6804 13.2411 21.4126 13.0915L20.6812 14.4012ZM22.7388 15.042C22.746 14.8706 22.7541 14.6937 22.7476 14.5458C22.741 14.3959 22.7178 14.1795 22.5981 13.9656L21.2892 14.6983C21.2386 14.6079 21.2461 14.5457 21.249 14.6117C21.2503 14.6404 21.2505 14.6822 21.2488 14.7464C21.2472 14.8104 21.244 14.8847 21.2401 14.979L22.7388 15.042ZM21.4126 10.9085C21.6804 10.7589 21.9087 10.6317 22.0764 10.5259C22.1613 10.4724 22.2503 10.4122 22.3304 10.3458C22.4043 10.2846 22.5153 10.1823 22.5981 10.0344L21.2892 9.30168C21.3375 9.21543 21.388 9.17871 21.3735 9.19072C21.3653 9.19756 21.3379 9.21832 21.2761 9.25725C21.1507 9.33637 20.9652 9.44028 20.6812 9.59884L21.4126 10.9085ZM21.2401 9.02097C21.244 9.11528 21.2472 9.18961 21.2488 9.25357C21.2505 9.31779 21.2503 9.35964 21.249 9.38827C21.2461 9.45428 21.2386 9.39206 21.2892 9.30169L22.5981 10.0344C22.7178 9.82054 22.741 9.60408 22.7476 9.45419C22.7541 9.30634 22.746 9.12945 22.7388 8.95797L21.2401 9.02097ZM2.58741 13.0915C2.31959 13.2411 2.0913 13.3683 1.92358 13.4741C1.83872 13.5276 1.74971 13.5878 1.66957 13.6542C1.59566 13.7154 1.48474 13.8177 1.4019 13.9656L2.71078 14.6983C2.6625 14.7846 2.61198 14.8213 2.62648 14.8093C2.63474 14.8024 2.66215 14.7817 2.72387 14.7427C2.84929 14.6636 3.03482 14.5597 3.31876 14.4012L2.58741 13.0915ZM2.75992 14.979C2.75595 14.8847 2.75285 14.8104 2.7512 14.7464C2.74954 14.6822 2.74973 14.6404 2.75099 14.6117C2.75389 14.5457 2.76137 14.6079 2.71078 14.6983L1.4019 13.9656C1.28221 14.1795 1.25903 14.3959 1.25244 14.5458C1.24593 14.6937 1.25403 14.8706 1.26124 15.042L2.75992 14.979ZM3.31876 9.59884C3.03482 9.44028 2.84929 9.33637 2.72386 9.25725C2.66214 9.21832 2.63474 9.19756 2.62648 9.19072C2.61198 9.17871 2.66251 9.21543 2.71079 9.30168L1.4019 10.0344C1.48473 10.1823 1.59565 10.2846 1.66956 10.3458C1.74971 10.4122 1.83872 10.4724 1.92357 10.5259C2.0913 10.6317 2.31959 10.7589 2.58741 10.9085L3.31876 9.59884ZM1.26124 8.95797C1.25403 9.12945 1.24593 9.30634 1.25244 9.45419C1.25903 9.60408 1.28221 9.82054 1.4019 10.0344L2.71078 9.30168C2.76137 9.39206 2.75389 9.45428 2.75099 9.38827C2.74973 9.35964 2.74954 9.31779 2.7512 9.25357C2.75285 9.18961 2.75595 9.11528 2.75992 9.02097L1.26124 8.95797ZM14.7637 6.99782L14.7564 4.49637L13.2564 4.50073L13.2637 7.00218L14.7637 6.99782ZM15.0162 7.25C14.875 7.25 14.7637 7.13631 14.7637 7H13.2637C13.2637 7.96826 14.0501 8.75 15.0162 8.75V7.25ZM15.2687 7C15.2687 7.13631 15.1574 7.25 15.0162 7.25V8.75C15.9823 8.75 16.7687 7.96826 16.7687 7H15.2687ZM15.2687 4.51618V7H16.7687V4.51618H15.2687ZM16.5084 4.76865C18.6966 4.82509 19.6778 5.06124 20.3208 5.70256L21.3801 4.64058C20.2676 3.53084 18.6939 3.32452 16.5471 3.26915L16.5084 4.76865ZM16.7687 4.51618C16.7687 4.656 16.6534 4.77239 16.5084 4.76865L16.5471 3.26915C15.8429 3.25099 15.2687 3.81835 15.2687 4.51618H16.7687ZM13.5052 4.75C13.3698 4.75 13.2568 4.64027 13.2564 4.50073L14.7564 4.49637C14.7544 3.80569 14.1931 3.25 13.5052 3.25V4.75ZM17.0653 20.7135C18.9399 20.6343 20.353 20.384 21.3801 19.3594L20.3208 18.2974C19.7336 18.8831 18.8563 19.1365 17.002 19.2148L17.0653 20.7135ZM15.2687 17V18.9765H16.7687V17H15.2687ZM13.2579 19.0007C13.2575 19.121 13.2572 19.2136 13.255 19.2926C13.2528 19.3721 13.249 19.4192 13.245 19.4481C13.2411 19.4764 13.2396 19.4669 13.2513 19.4387C13.2654 19.4045 13.2911 19.3617 13.3299 19.323L14.389 20.3852C14.6246 20.1502 14.701 19.8709 14.7311 19.6521C14.7582 19.4548 14.7573 19.219 14.7579 19.0051L13.2579 19.0007ZM13.0079 20.75C13.2218 20.75 13.4576 20.7516 13.6549 20.7251C13.8739 20.6957 14.1534 20.6201 14.389 20.3852L13.3299 19.323C13.3687 19.2843 13.4116 19.2587 13.4458 19.2447C13.4741 19.2331 13.4836 19.2346 13.4553 19.2384C13.4264 19.2423 13.3792 19.246 13.2998 19.248C13.2208 19.25 13.1282 19.25 13.0079 19.25V20.75ZM17.002 19.2148C16.8812 19.2199 16.7889 19.2238 16.7101 19.225C16.631 19.2262 16.5849 19.2244 16.5575 19.2217C16.5309 19.2191 16.5426 19.2175 16.5734 19.2292C16.6103 19.2433 16.6536 19.2685 16.6917 19.305L15.6536 20.3878C15.8978 20.6219 16.183 20.6921 16.4108 20.7145C16.6127 20.7344 16.8518 20.7225 17.0653 20.7135L17.002 19.2148ZM15.2687 18.9765C15.2687 19.1953 15.267 19.4374 15.295 19.6397C15.3263 19.8655 15.407 20.1514 15.6536 20.3878L16.6917 19.305C16.7313 19.343 16.7584 19.3863 16.7737 19.4221C16.7863 19.4516 16.7848 19.4622 16.7808 19.4337C16.7768 19.4046 16.7729 19.3566 16.7708 19.2753C16.7687 19.1945 16.7687 19.0997 16.7687 18.9765H15.2687Z"
+                                    fill="#C4C5C7"
+                                  ></path>
+                                </g>
+                              </svg>
+                            </figure>
+                            <div
+                              class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                            >
+                              <h6
+                                class="font-[noto] card-title h-[100%] text-[17px] font-light"
+                              >
+                                BlizzCon
+                              </h6>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex flex-row flex-wrap">
+                          <div
+                            class="card w-[100%] h-[55px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                          >
+                            <figure class="w-[7%] h-[100%]">
+                              <svg
+                                fill="#C4C5C7"
+                                width="35px"
+                                height="35px"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                  id="SVGRepo_tracerCarrier"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path
+                                    d="M5,22H19a3,3,0,0,0,3-3V9a3,3,0,0,0-3-3H17V4a2,2,0,0,0-2-2H9A2,2,0,0,0,7,4V6H5A3,3,0,0,0,2,9V19A3,3,0,0,0,5,22ZM18,8h1a1,1,0,0,1,1,1V19a1,1,0,0,1-1,1H18ZM9,4h6V6H9ZM8,8h8V20H8ZM4,9A1,1,0,0,1,5,8H6V20H5a1,1,0,0,1-1-1Z"
+                                  ></path>
+                                </g>
+                              </svg>
+                            </figure>
+                            <div
+                              class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                            >
+                              <h6
+                                class="font-[noto] card-title h-[100%] text-[17px] font-light"
+                              >
+                                Careers
+                              </h6>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex flex-row flex-wrap">
+                          <div
+                            class="card w-[100%] h-[55px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                          >
+                            <figure class="w-[7%] h-[100%]">
+                              <svg
+                                width="33px"
+                                height="33px"
+                                viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="#C4C5C7"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                  id="SVGRepo_tracerCarrier"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path d="M0 0h48v48H0z" fill="none"></path>
+                                  <g id="Shopicon">
+                                    <path
+                                      d="M40,6h-8h-3.003C28.997,6.011,29,6.021,29,6.032c0,2.761-2.239,5-5,5s-5-2.239-5-5C19,6.021,19.003,6.011,19.003,6H16H8 c-2.2,0-4,1.8-4,4v8c0,2.2,1.8,4,4,4l1.978,0v16c0,2.2,1.8,4,4,4L34,42c2.2,0,4-1.8,4-4V22h2c2.2,0,4-1.8,4-4v-8 C44,7.8,42.2,6,40,6z M40,18h-6v4v16l-20.022,0V22v-4L8,18v-8h7.923c1.469,2.978,4.538,5.032,8.077,5.032s6.608-2.053,8.077-5.032 H40V18z"
+                                    ></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </figure>
+                            <div
+                              class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                            >
+                              <h6
+                                class="font-[noto] card-title h-[100%] text-[16px] font-light"
+                              >
+                                Gear
+                              </h6>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- #region end -->
+
+              <!-- #region Shop -->
+
+              <div class="shop mr-2 cursor-pointer shadow-sm h-fit">
+                <div class="navbar h-[100%] flex">
+                  <a
+                    class="h-[100%] p-2 px-4 w-[100%] rounded-[5px] hover:bg-[#373D52] font-[notoBold] flex items-center justify-center text-[16px] text-[#FFFFFF] border-0 hover:border-0"
+                  >
+                    Shop
+                  </a>
+                </div>
+              </div>
+              <!-- #region end -->
+
+              <!-- #region account -->
+              <div class="acc mr-2 h-fit z-100 cursor-pointer">
+                <div class="navbar w-[100%] flex shadow-sm p-0">
+                  <div
+                    class="navbar-start hidden desktop:items-center desktop:justify-center desktop:flex w-[100%] desktop:text-[35px]"
+                  >
+                    <ul
+                      class="menu menu-horizontal w-[100%] desktop:justify-center p-0 h-[100%]"
+                    >
+                      <li
+                        class="dropdown rounded-[5px] hover:bg-[#373D52] relative group"
+                      >
+                        <a
+                          class="h-[100%] w-[100%] font-[notoBold] flex text-[16px] text-[#FFFFFF]"
+                          tabindex="0"
+                        >
+                          <svg
+                            class="mr-1"
+                            width="28px"
+                            height="28px"
+                            viewBox="0 0 24.00 24.00"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#C4C5C7"
+                            stroke="#C4C5C7"
+                            stroke-width="0.00024000000000000003"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke="#CCCCCC"
+                              stroke-width="0.43200000000000005"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <g>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path
+                                  d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                                ></path>
+                              </g>
+                            </g>
+                          </svg>
+                          Account
+                          <img src="/battlenet/images/dd.svg" alt="" />
+                        </a>
+                        <ul
+                          class="absolute right-[-90px] top-[60px] w-[320px] dark:bg-[#1E201E] bg-[#272930] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 p-0 z-5"
+                        >
+                          <li class="flex flex-row flex-wrap">
+                            <div
+                              class="card w-[100%] h-[80px] items-center justify-center flex flex-row"
+                            >
+                              <a
+                                href="./index2.html"
+                                class="w-[100%] h-[100%] flex items-center justify-center"
+                              >
+                                <button
+                                  class="btn btn-primary shadow-none btn-xl text-[16px] h-[60%] w-[90%] font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
+                                >
+                                  Log In
+                                </button>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap pl-2 pr-2">
+                            <div
+                              class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:bg-[#37393f]"
+                            >
+                              <figure class="w-[7%] h-[100%]">
+                                <svg
+                                  fill="#C4C5C7"
+                                  width="30px"
+                                  height="30px"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"
+                                  ></g>
+                                  <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></g>
+                                  <g id="SVGRepo_iconCarrier">
+                                    <title>Account Settings</title>
+                                    <path
+                                      d="M9.6,3.32a3.86,3.86,0,1,0,3.86,3.85A3.85,3.85,0,0,0,9.6,3.32M16.35,11a.26.26,0,0,0-.25.21l-.18,1.27a4.63,4.63,0,0,0-.82.45l-1.2-.48a.3.3,0,0,0-.3.13l-1,1.66a.24.24,0,0,0,.06.31l1,.79a3.94,3.94,0,0,0,0,1l-1,.79a.23.23,0,0,0-.06.3l1,1.67c.06.13.19.13.3.13l1.2-.49a3.85,3.85,0,0,0,.82.46l.18,1.27a.24.24,0,0,0,.25.2h1.93a.24.24,0,0,0,.23-.2l.18-1.27a5,5,0,0,0,.81-.46l1.19.49c.12,0,.25,0,.32-.13l1-1.67a.23.23,0,0,0-.06-.3l-1-.79a4,4,0,0,0,0-.49,2.67,2.67,0,0,0,0-.48l1-.79a.25.25,0,0,0,.06-.31l-1-1.66c-.06-.13-.19-.13-.31-.13L19.5,13a4.07,4.07,0,0,0-.82-.45l-.18-1.27a.23.23,0,0,0-.22-.21H16.46M9.71,13C5.45,13,2,14.7,2,16.83v1.92h9.33a6.65,6.65,0,0,1,0-5.69A13.56,13.56,0,0,0,9.71,13m7.6,1.43a1.45,1.45,0,1,1,0,2.89,1.45,1.45,0,0,1,0-2.89Z"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[93%]"
+                              >
+                                <h6
+                                  class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px] font-light"
+                                >
+                                  Account Setting
+                                </h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="flex flex-row flex-wrap pl-2 pr-2">
+                            <div
+                              class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#37393f]"
+                            >
+                              <figure class="w-[7%] h-[100%]">
+                                <svg
+                                  fill="#C4C5C7"
+                                  width="30px"
+                                  height="30px"
+                                  viewBox="0 -8 72 72"
+                                  id="Layer_1"
+                                  data-name="Layer 1"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"
+                                  ></g>
+                                  <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></g>
+                                  <g id="SVGRepo_iconCarrier">
+                                    <title>barcode</title>
+                                    <path
+                                      d="M8,7h7V42H8ZM18.5,7H22V42H18.5Zm7,0H29V42H25.5ZM36,7h3.5V42H36ZM50,7h3.5V42H50ZM60.5,7H64V42H60.5ZM43,7h1.75V42H43ZM32.5,7h1.75V42H32.5ZM55.25,7H57V42H55.25ZM8,45.5h3.5V49H8Zm10.5,0H22V49H18.5Zm7,0H29V49H25.5Zm17.5,0h3.5V49H43Zm17.5,0H64V49H60.5ZM50,45.5h7V49H50Zm-17.5,0h7V49h-7V45.5Z"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                              >
+                                <h6
+                                  class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px] font-light"
+                                >
+                                  Sign Up
+                                </h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex bg-[#1A1C23] flex-row flex-wrap pt-1 pl-2 pr-2"
+                          >
+                            <div
+                              class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#37393f]"
+                            >
+                              <figure class="w-[10%] h-[100%]">
+                                <svg
+                                  class="mr-2"
+                                  fill="#C4C5C7"
+                                  width="30px"
+                                  height="30px"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"
+                                  ></g>
+                                  <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></g>
+                                  <g id="SVGRepo_iconCarrier">
+                                    <g data-name="Layer 2">
+                                      <g data-name="menu-arrow-circle">
+                                        <rect
+                                          width="24"
+                                          height="24"
+                                          transform="rotate(180 12 12)"
+                                          opacity="0"
+                                        ></rect>
+                                        <path
+                                          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                                        ></path>
+                                        <path
+                                          d="M12 6a3.5 3.5 0 0 0-3.5 3.5 1 1 0 0 0 2 0A1.5 1.5 0 1 1 12 11a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.16A3.49 3.49 0 0 0 12 6z"
+                                        ></path>
+                                        <circle cx="12" cy="17" r="1"></circle>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                              >
+                                <h6
+                                  class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px] font-light"
+                                >
+                                  Support
+                                </h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex bg-[#1A1C23] flex-row flex-wrap pl-2 pr-2 pb-2"
+                          >
+                            <div
+                              class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#37393f]"
+                            >
+                              <figure class="w-[7%] h-[100%]">
+                                <svg
+                                  width="30px"
+                                  height="30px"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"
+                                  ></g>
+                                  <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></g>
+                                  <g id="SVGRepo_iconCarrier">
+                                    <path
+                                      d="M11 3H13V21H11V3Z"
+                                      fill="#C4C5C7"
+                                    ></path>
+                                    <path
+                                      d="M5 8C5 7.44771 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z"
+                                      fill="#C4C5C7"
+                                    ></path>
+                                    <path
+                                      d="M19 8C19 7.44771 18.5523 7 18 7H15V5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H15V17H18C18.5523 17 19 16.5523 19 16V8Z"
+                                      fill="#C4C5C7"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                              >
+                                <h6
+                                  class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px] font-light"
+                                >
+                                  Change BattleTag
+                                </h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="flex bg-[#1A1C23] flex-row flex-wrap pl-2 pr-2 pb-1"
+                          >
+                            <div
+                              class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#37393f]"
+                            >
+                              <figure class="w-[8%] h-[100%]">
+                                <svg
+                                  class="mr-2"
+                                  fill="#C4C5C7"
+                                  height="40px"
+                                  width="40px"
+                                  version="1.1"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  enable-background="new 0 0 512 512"
+                                >
+                                  <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"
+                                  ></g>
+                                  <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></g>
+                                  <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                      <g>
+                                        <path
+                                          d="M480.6,341.4c-11.3,0-20.4,9.1-20.4,20.4v98.4H51.8v-98.4c0-11.3-9.1-20.4-20.4-20.4c-11.3,0-20.4,9.1-20.4,20.4v118.8 c0,11.3,9.1,20.4,20.4,20.4h449.2c11.3,0,20.4-9.1,20.4-20.4V361.8C501,350.5,491.9,341.4,480.6,341.4z"
+                                        ></path>
+                                        <path
+                                          d="m241,365.6c11.5,11.6 25.6,5.2 29.9,0l117.3-126.2c7.7-8.3 7.2-21.2-1.1-28.9-8.3-7.7-21.2-7.2-28.8,1.1l-81.9,88.1v-265.2c0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4v265.3l-81.9-88.1c-7.7-8.3-20.6-8.7-28.9-1.1-8.3,7.7-8.7,20.6-1.1,28.9l117.3,126.1z"
+                                        ></path>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </figure>
+                              <div
+                                class="card-body gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                              >
+                                <h6
+                                  class="font-[noto] text-[#FFFFFF] card-title h-[100%] text-[17px] font-light"
+                                >
+                                  Download Battle.net
+                                </h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- #region end -->
+              <!-- #region download -->
+              <div class="down flex cursor-pointer w-fit shadow-sm h-fit">
+                <div class="navbar w-fit h-[100%]">
+                  <a
+                    class="font-[notoBold] flex justify-center items-center px-1 py-2 text-[16px] hover:bg-[#373D52] bg-black rounded-[10px] text-[#FFFFFF] w-fit border-0 hover:border-0"
+                    ><svg
+                      class="w-[12%] mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#148EFF"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0"
+                      aria-labelledby="blz-icon-title-battlenet"
+                      viewBox="0 0 48 48"
+                      part="icon"
+                    >
+                      <path
+                        stroke="none"
+                        d="M38.016 18.29c1.23-3.787 1.462-7.242.623-9.859l-.024-.073c-.05-.142-.175-.442-.334-.442-.12 0-.122.201-.115.303l.007.059c.267 2.337-.448 5.671-1.884 9.162-2.947-1.338-6.487-2.407-10.413-3.037-3.529-.567-6.906-.692-9.97-.442.364-2.41 1.264-4.086 2.74-4.44 2.033-.486 4.25.851 6.364 3.284q.547.075 1.097.163 1.564.25 3.072.596c-3.854-7.249-9.023-11.312-12.954-9.812-2.992 1.14-4.52 5.256-4.338 10.788-3.896.829-7.003 2.355-8.85 4.39l-.051.057c-.098.115-.296.373-.216.51.06.105.235.006.32-.051l.047-.036c1.89-1.4 5.135-2.448 8.877-2.949.315 3.22 1.16 6.82 2.576 10.536 1.274 3.34 2.854 6.327 4.603 8.855-2.27.89-4.17.948-5.215-.154-1.438-1.516-1.39-4.104-.339-7.152q-.21-.51-.408-1.032a48 48 0 0 1-1.019-2.957c-4.352 6.962-5.285 13.47-2.021 16.125 2.483 2.02 6.812 1.286 11.512-1.638 2.666 2.96 5.541 4.888 8.227 5.47l.075.016c.148.027.47.069.55-.069.06-.104-.113-.206-.205-.251l-.054-.023c-2.158-.937-4.688-3.223-6.993-6.213 2.632-1.883 5.327-4.414 7.836-7.499 2.256-2.773 4.053-5.635 5.368-8.414 1.905 1.52 2.906 3.138 2.474 4.594-.594 2.003-2.86 3.255-6.024 3.869q-.339.436-.69.869-1 1.23-2.052 2.361c8.205.288 14.307-2.158 14.975-6.312.508-3.16-2.293-6.543-7.174-9.151m-7.127 8.286c-2.893 3.557-6.5 6.586-9.707 8.337a36.3 36.3 0 0 1-3.091-6.183c-1.634-4.285-2.454-8.922-2.366-12.575 2.28-.076 4.635.05 6.9.414 4.527.727 8.953 2.336 12.073 4.239a36.3 36.3 0 0 1-3.809 5.768"
+                      ></path>
+                    </svg>
+                    Download Battle.net
+                  </a>
+                </div>
+              </div>
+              <!-- #region end -->
+            </div>
+          </div>
+        </div>
+        <div class="navbar-end w-0"></div>
+      </div>
+      <!-- #region end -->
+
+      <!-- #region video -->
+      <div class="video z-0 h-[630px] w-full max-w-[2500px] mx-auto">
+        <div
+          class="film z-0 relative h-full overflow-hidden max-w-[2500px] mx-auto"
+        >
+          <video
+            id="movie"
+            class="absolute z-0 top-0 left-0 w-full h-full object-cover"
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./images/about/about_masthead_desktop.mp4"
+          ></video>
+          <div
+            class="mtn relative h-full text-white font-[notoBold] flex flex-col justify-center items-center max-w-[2500px]"
+          >
+            <div class="our text-[20px] mb-[10px]">Our Mission</div>
+            <div
+              class="head desktop:text-[50px] mobile:text-[40px] leading-[100%] text-center"
+            >
+              Foster Joy and Belonging for Everyone
+            </div>
+          </div>
+          <div class="pas absolute left-0 bottom-0 w-[40px] h-[40px]">
+            <button
+              id="butt"
+              class="btn bg-gray-600 rounded-[50%] w-[35px] h-[35px] p-2 border-none shadow-none"
+            >
+              <svg
+                id="pause-Icon"
+                width="30px"
+                height="30px"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M7 1H2V15H7V1Z" fill="#C4C5C7"></path>
+                  <path d="M14 1H9V15H14V1Z" fill="#C4C5C7"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- #region end -->
+
+      <!-- #region mission -->
+      <div
+        class="desktop:flex h-[680px] w-full flex flex-col justify-between items-center desktop:max-w-[1500px] mx-auto bg-[url(/battlenet/images/about/img-1.png)] bg-cover bg-center"
+      >
+        <div
+          class="mission h-full text-white font-[notoBold] flex flex-col justify-center items-center mobile:w-[98%] desktop:max-w-[800px]"
+        >
+          <div class="our desktop:text-[20px] mobile:text-[15px] mb-[10px]">
+            Our Mission
+          </div>
+          <div
+            class="head desktop:text-[50px] mobile:text-[30px] leading-[110%] text-center mb-[40px]"
+          >
+            To craft genre-defining games
+            <br class="mobile:hidden desktop:flex" />
+            and legendary worlds for <br class="mobile:hidden desktop:flex" />
+            all to share.
+          </div>
+          <div
+            class="para text-center desktop:text-[19px] mobile:text-[15px] text-white/70"
+          >
+            We want to redefine what games can be and how you experience them.
+            We aim to balance the love and attention our craft demands while
+            delivering at the speed players expect. Through unparalleled
+            creativity and storytelling, we create immersive universes and
+            iconic characters that are beloved across platforms, borders,
+            backgrounds, and generations - only made possible by building a work
+            environment that nurtures the artistry of game development and
+            unleashes the aspirations of our people.
+          </div>
+        </div>
+      </div>
+      <!-- #region end -->
+      <!-- #region card -->
+      <div
+        class="desktop:h-[1400px] mobile:h-[3000px] dark:bg-[#1E201E] bg-[#2D3042] desktop:w-full flex flex-col justify-center items-center mobile:w-[98%] max-w-[7000px] mx-auto bg-[url(/battlenet/images/about/img-2.png)] bg-cover bg-center"
+      >
+        <div
+          class="core desktop:h-[20%] mobile:h-[10%] desktop:max-w-[720px] text-white font-[DMsans] flex flex-col justify-center items-center mt-[20px]"
+        >
+          <div
+            class="our desktop:text-[20px] mobile:text-[18px] mb-[10px] text-sky-200 font-extrabold"
+          >
+            What We Live By
+          </div>
+          <div
+            class="head desktop:text-[60px] mobile:text-[40px] leading-[100%] text-center mb-[40px] font-extrabold"
+          >
+            Core Values
+          </div>
+          <div
+            class="para text-center desktop:text-[19px] mobile:text-[16px] text-white/70"
+          >
+            Our values reflect the heart and soul of Blizzard. They serve as the
+            foundation of our culture and as the guideposts for how we treat one
+            another, show up for our players, and make decisions.
+          </div>
+        </div>
+        <div
+          class="games desktop:h-[80%] mobile:h-[90%] flex mobile:flex-col desktop:flex-row desktop:flex-wrap justify-center desktop:gap-x-7 items-center max-w-[1000px]"
+        >
+          <div
+            class="game transition duration-400 ease-in-out hover:scale-103 flex flex-col flex-wrap justify-center items-center mobile:w-[90%] mobile:h-[20%] overflow-hidden desktop:h-[50%] desktop:w-[31%]"
+          >
+            <div class="igame max-w-full object-cover mobile:h-[80%]">
+              <img
+                class="w-full h-full mobile:object-cover shadow-black shadow-xl"
+                src="./images/about/img-3.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="esm w-full mt-5 h-[10%] text-[21px] text-white text-center font-[notoBold]"
+            >
+              <h1>For the Love of Play</h1>
+            </div>
+          </div>
+          <div
+            class="game transition duration-400 ease-in-out hover:scale-103 flex flex-col flex-wrap justify-center items-center mobile:w-[90%] mobile:h-[20%] overflow-hidden desktop:h-[50%] desktop:w-[31%]"
+          >
+            <div class="igame max-w-full object-cover mobile:h-[80%]">
+              <img
+                class="w-full h-full mobile:object-cover shadow-black shadow-xl"
+                src="./images/about/img-4.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="esm w-full mt-5 h-[10%] text-[21px] text-white text-center font-[notoBold]"
+            >
+              <h1>Passion for Greatness</h1>
+            </div>
+          </div>
+          <div
+            class="game transition duration-400 ease-in-out hover:scale-103 flex flex-col flex-wrap justify-center items-center mobile:w-[90%] mobile:h-[20%] overflow-hidden desktop:h-[50%] desktop:w-[31%]"
+          >
+            <div class="igame max-w-full object-cover mobile:h-[80%]">
+              <img
+                class="w-full h-full mobile:object-cover shadow-black shadow-xl"
+                src="./images/about/img-5.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="esm w-full mt-5 h-[10%] text-[21px] text-white text-center font-[notoBold]"
+            >
+              <h1>Better Together</h1>
+            </div>
+          </div>
+          <div
+            class="game transition duration-400 ease-in-out hover:scale-103 flex flex-col flex-wrap justify-center items-center mobile:w-[90%] mobile:h-[20%] overflow-hidden desktop:h-[50%] desktop:w-[31%]"
+          >
+            <div class="igame max-w-full object-cover mobile:h-[80%]">
+              <img
+                class="w-full h-full mobile:object-cover shadow-black shadow-xl"
+                src="./images/about/img-6.png "
+                alt=""
+              />
+            </div>
+            <div
+              class="esmw-full mt-5 h-[10%] text-[21px] text-white text-center font-[notoBold]"
+            >
+              <h1>Strength in Diversity</h1>
+            </div>
+          </div>
+          <div
+            class="game transition duration-400 ease-in-out hover:scale-103 flex flex-col flex-wrap justify-center items-center mobile:w-[90%] mobile:h-[20%] overflow-hidden desktop:h-[50%] desktop:w-[31%]"
+          >
+            <div class="igame max-w-full object-cover mobile:h-[80%]">
+              <img
+                class="w-full h-full mobile:object-cover shadow-black shadow-xl"
+                src="./images/about/img-7.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="esm w-full mt-5 h-[10%] text-[21px] text-white text-center font-[notoBold]"
+            >
+              <h1>Boundless Curiosity</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #region end -->
+
+      <!-- #region footer -->
+      <div
+        class="footer desktop:flex mobile:hidden gap-3 flex-wrap flex-col justify-center items-center max-w-[1500px]"
+      >
+        <div
+          class="about gap-0 justify-between pt-[50px] items-center flex flex-wrap w-[98%]"
+        >
+          <div class="main flex flex-wrap text-white w-[60%] font-[objectsans]">
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="#"
+              >Careers</a
+            >
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="./index3.html"
+              >About</a
+            >
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="#"
+              >Support</a
+            >
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="#"
+              >Connect Us</a
+            >
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="#"
+              >Press</a
+            >
+            <a
+              class="hover:bg-[#373D52] text-[18px] p-4 rounded-[10px]"
+              href="#"
+              >API</a
+            >
+          </div>
+          <div class="lang text-end w-[40%]">
+            <details class="dropdown">
+              <summary
+                class="btn m-1 btn-active text-[#C4C5C7] p-4 border-0 hover:border-0 dark:hover:bg-[#697565] hover:bg-[#373D52] dark:bg-[#3C3D37] bg-[#15171E]"
+              >
+                <img src="./images/language.svg" alt="" /> English(US)
+                <img src="./images/dd.svg" alt="" />
+              </summary>
+              <ul
+                class="menu dropdown-content h-[430px] top-[-430px] overflow-auto flex flex-row dark:bg-[#57564F] dark:text-gray/900 bg-[#171926] right-0 rounded-box z-1 w-[450px] p-2"
+              >
+                <ul class="w-[48%] ml-0 flex flex-col justify-baseline">
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]">
+                        <img src="/battlenet/images/tik.svg" alt="" />
+                      </figure>
+                      <div
+                        class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          English(US)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          English(SEA)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Español (Latino)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Português (Brasil)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">ภาษาไทย</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">日本語</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Deutsch</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          English(UE)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Español (EU)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="w-[49%] flex flex-col justify-baseline">
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Français</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Italiano</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Polski</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">
+                          Português (EU)
+                        </h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Русский</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">Türkçe</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">한국어</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">繁體中文</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-row w-[100%]">
+                    <div
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                    >
+                      <figure class="w-[13%] h-[100%]"></figure>
+                      <div
+                        class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                      >
+                        <h6 class="card-title h-[40%] text-[16px]">简体中文</h6>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            </details>
+          </div>
+        </div>
+        <hr class="border-0 h-[0.2px] bg-white/10 w-[100%] mx-auto" />
+        <div class="add gap-0 flex-wrap justify-between flex w-[98%]">
+          <div class="main1 mb-[180px] w-[70%] flex flex-wrap">
+            <div class="image items-center flex w-[20%]">
+              <a href="">
+                <img
+                  class="w-[100%] h-fit"
+                  src="./images/about/blizz_blue_logo-f.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="parr font-[DMsans] gap-5 flex flex-wrap flex-col">
+              <div class="par text-gray-200/50 text-[13px]">
+                ©2025 Blizzard Entertainment, Inc. <br />
+                All
+                <span
+                  class="underline text-[#C4C5C7] hover:text-white cursor-pointer"
+                >
+                  trademarks
+                </span>
+                referenced herein are the properties of their respective owners.
+              </div>
+              <div class="foot gap-3 flex flex-wrap">
+                <a class="hover:text-[#fff]" href="#">Privasy</a>
+                <a class="hover:text-[#fff]" href="#">Legal</a>
+                <a class="hover:text-[#fff]" href="#">Terms</a>
+                <a class="hover:text-[#fff]" href="#">Cookie Policy</a>
+                <a class="hover:text-[#fff]" href="#">Cookies Setting</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tic block w-[30%] text-end">
+            <button
+              class="btn rounded-[100px] hover:bg-[#373D52] dark:hover:bg-[#697565] dark:border-black dark:bg-[#3C3D37] bg-[#15171E] dark:text-black text-white border-[#C4C5C7] shadow-none"
+            >
+              <svg
+                aria-label="Facebook logo"
+                width="16"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 12h5V8c0-6 4-7 11-6v5c-4 0-5 0-5 3v2h5l-1 6h-4v12h-6V18H8z"
+                ></path>
+              </svg>
+            </button>
+            <button
+              class="btn rounded-[100px] hover:bg-[#373D52] dark:hover:bg-[#697565] dark:bg-[#3C3D37] bg-[#15171E] dark:border-black dark:text-black text-white border-[#C4C5C7] shadow-none"
+            >
+              <svg
+                aria-label="X logo"
+                width="16"
+                height="12"
+                viewBox="0 0 300 271"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- #region end -->
+
+      <!-- #region footer-m -->
+      <div
+        class="mt-[30px] desktop:hidden flex flex-wrap justify-center items-center w-[98%]"
+      >
+        <div class="w-full gap-5 flex flex-wrap">
+          <div
+            class="about gap-4 justify-between pt-[50px] items-center flex flex-col-reverse flex-wrap w-full"
+          >
+            <div
+              class="main text-[14px] flex flex-row flex-wrap items-center justify-center text-white w-[90%] font-[objectsans]"
+            >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#"
+                >Careers</a
+              >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#"
+                >About</a
+              >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#"
+                >Support</a
+              >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#"
+                >Connect Us</a
+              >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#"
+                >Press</a
+              >
+              <a class="hover:bg-[#212329] p-3 rounded-[10px]" href="#">API</a>
+            </div>
+            <div class="lang text-end w-[40%]">
+              <details class="dropdown">
+                <summary
+                  class="btn m-1 btn-active text-white p-4 border-0 hover:border-0 hover:bg-[#212329] bg-[#15171E]"
+                >
+                  <img src="./images/language.svg" alt="" /> English(US)
+                  <img src="./images/dd.svg" alt="" />
+                </summary>
+                <ul
+                  class="menu dropdown-content h-[430px] top-[-430px] right-[-100px] overflow-scroll flex bg-[#171926] text-white rounded-box z-1 w-[350px] p-2"
+                >
+                  <ul class="w-full ml-0 flex flex-col justify-baseline">
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]">
+                          <img src="/battlenet/images/tik.svg" alt="" />
+                        </figure>
+                        <div
+                          class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            English(US)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            English(SEA)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Español (Latino)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Português (Brasil)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            ภาษาไทย
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">日本語</h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Deutsch
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            English(UE)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Español (EU)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Français
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Italiano
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">Polski</h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Português (EU)
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            Русский
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">Türkçe</h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">한국어</h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            繁體中文
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex flex-row w-[100%]">
+                      <div
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      >
+                        <figure class="w-[13%] h-[100%]"></figure>
+                        <div
+                          class="card-body justify-center gap-0 items-start h-[60%] flex p-0 w-[85%]"
+                        >
+                          <h6 class="card-title h-[40%] text-[16px]">
+                            简体中文
+                          </h6>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </details>
+            </div>
+          </div>
+          <hr class="border-0 h-[0.2px] bg-white/10 w-[100%] mx-auto" />
+          <div
+            class="flex-wrap justify-center items-center flex flex-col w-[100%]"
+          >
+            <div
+              class="gap-7 mb-[120px] w-[90%] flex flex-col flex-wrap justify-center items-center"
+            >
+              <div class="items-center justify-center flex w-[70%] mr-5">
+                <a href="">
+                  <img
+                    class="w-[100%] h-fit"
+                    src="./images/about/blizz_blue_logo-f.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="flex gap-2 flex-row w-[30%]">
+                <button
+                  class="btn rounded-[100px] hover:bg-[#212329] bg-[#15171E] text-white border-[#C4C5C7] shadow-none"
+                >
+                  <svg
+                    aria-label="Facebook logo"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      fill="white"
+                      d="M8 12h5V8c0-6 4-7 11-6v5c-4 0-5 0-5 3v2h5l-1 6h-4v12h-6V18H8z"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="btn rounded-[100px] hover:bg-[#212329] bg-[#15171E] text-white border-[#C4C5C7] shadow-none"
+                >
+                  <svg
+                    aria-label="X logo"
+                    width="16"
+                    height="12"
+                    viewBox="0 0 300 271"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="font-[DMsans] gap-5 flex flex-wrap flex-col justify-center items-center"
+              >
+                <div class="text-center text-gray-200/50 text-[12px]">
+                  ©2025 Blizzard Entertainment, Inc. <br />
+                  All
+                  <span
+                    class="underline inline text-[#C4C5C7] hover:text-white cursor-pointer"
+                  >
+                    trademarks
+                  </span>
+                  referenced herein are the properties of their respective
+                  owners.
+                </div>
+                <div
+                  class="gap-5 flex flex-wrap text-[13px] justify-center items-center"
+                >
+                  <a class="hover:text-[#fff]" href="#">Privasy</a>
+                  <a class="hover:text-[#fff]" href="#">Legal</a>
+                  <a class="hover:text-[#fff]" href="#">Terms</a>
+                  <a class="hover:text-[#fff]" href="#">Cookie Policy</a>
+                  <a class="hover:text-[#fff]" href="#">Cookies Setting</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #region end-->
+
+      <div
+        class="moon w-fit h-fit rounded-[5px] bg-gray-800 fixed left-3 bottom-3 z-20"
+      >
+        <label class="swap swap-rotate items-center justify-center">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" class="theme-controler" value="synthwave" />
+
+          <!-- sun icon -->
+          <svg
+            class="swap-off h-10 w-10 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+            />
+          </svg>
+
+          <!-- moon icon -->
+          <svg
+            class="swap-on h-10 w-10 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+        </label>
+      </div>
+    </div>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("side-menu");
+      const close = document.getElementById("side-btn");
+
+      btn.addEventListener("click", () => {
+        menu.classList.remove("-translate-x-full");
+      });
+      close.addEventListener("click", () => {
+        menu.classList.add("-translate-x-full");
+      });
+
+      const menuBtn = document.getElementById("menu1-btn");
+      const sideMenu = document.getElementById("side1-menu");
+      const closeBtn = document.getElementById("side1-btn");
+
+      menuBtn.addEventListener("click", () => {
+        sideMenu.classList.remove("translate-x-full");
+        sideMenu.classList.add("translate-x-0");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        sideMenu.classList.remove("translate-x-0");
+        sideMenu.classList.add("translate-x-full");
+      });
+
+      const button = document.getElementById("butt");
+      const icon = document.getElementById("pause-Icon");
+      const movie = document.getElementById("movie");
+
+      let isPlaying = true;
+
+      button.addEventListener("click", () => {
+        if (isPlaying) {
+          movie.pause();
+          icon.innerHTML = `<path d="M3 2L13 8L3 14V2Z" fill="#C4C5C7"></path>`; // آیکون Play
+        } else {
+          movie.play();
+          icon.innerHTML = `
+        <path d="M7 1H2V15H7V1Z" fill="#C4C5C7"></path>
+        <path d="M14 1H9V15H14V1Z" fill="#C4C5C7"></path>
+      `; // آیکون Pause
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+    <script>
+      const html = document.documentElement;
+      const controller = document.querySelector(".theme-controler");
+
+      controller.addEventListener("change", () => {
+        if (controller.checked) {
+          html.classList.add("dark"); // حالت شب
+        } else {
+          html.classList.remove("dark"); // حالت روز
+        }
+      });
+    </script>
+  </body>
+</html>

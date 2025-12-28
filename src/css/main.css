@@ -1,0 +1,775 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.banner {
+  width: 98%;
+  height: 350px;
+  position: relative;
+  margin-bottom: 80px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination,
+  .swiper-pagination-clickable,
+  .swiper-pagination-bullets,
+  .swiper-pagination-horizontal {
+    position: absolute;
+    bottom: -30px;
+    .swiper-pagination-bullet-active {
+      background-color: #007aff !important;
+    }
+    .swiper-pagination-bullet {
+      width: 40px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0;
+  }
+  &:hover .swiper-button-next,
+  &:hover .swiper-button-prev {
+    opacity: 100%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    transition-duration: 400ms;
+    top: 150px;
+    width: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15171e;
+    border: 0.5px, #616161, solid;
+    .swiper-navigation-icon {
+      width: 25px;
+      height: 25px;
+      color: #fff;
+    }
+  }
+  .swiper-button-prev {
+    left: 28px;
+  }
+  .swiper-button-next {
+    right: 28px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6,
+    .img7 {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+    }
+    .img1 {
+      background-image: url(/battlenet/images/banner/img-1.png);
+    }
+    .kart1 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      bottom: 30px;
+      z-index: 3;
+      img {
+        width: 60%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 25px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img2 {
+      background-image: url(/battlenet/images/banner/img-2.png);
+    }
+    .kart2 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 55%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 70%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img3 {
+      background-image: url(/battlenet/images/banner/img-3.png);
+    }
+    .kart3 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 95%;
+        margin: 10px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 70%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img4 {
+      background-image: url(/battlenet/images/banner/img-4.png);
+    }
+    .kart4 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 90%;
+        margin: 10px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 60%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img5 {
+      background-image: url(/battlenet/images/banner/img-5.png);
+    }
+    .kart5 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 55%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 70%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img6 {
+      background-image: url(/battlenet/images/banner/img-6.png);
+    }
+    .kart6 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 80%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 70%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img7 {
+      background-image: url(/battlenet/images/banner/img-7.png);
+    }
+    .kart7 {
+      position: absolute;
+      width: 25%;
+      left: 100px;
+      z-index: 3;
+      img {
+        width: 70%;
+        margin: 10px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 70%;
+        height: 70px;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.banner1 {
+  width: 92%;
+  height: 430px;
+  position: relative;
+  margin-bottom: 80px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+  }
+  .swiper-pagination1,
+  .swiper-pagination-clickable,
+  .swiper-pagination-bullets,
+  .swiper-pagination-horizontal {
+    position: absolute;
+    text-align: center;
+    bottom: -30px;
+    .swiper-pagination-bullet-active {
+      background-color: #007aff !important;
+    }
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: #d5d1d1;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0;
+  }
+  &:hover .swiper-button-next,
+  &:hover .swiper-button-prev {
+    opacity: 100%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    transition-duration: 400ms;
+    top: 200px;
+    width: 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15171e;
+    border: 0.5px, #616161, solid;
+    .swiper-navigation-icon {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+    }
+  }
+  .swiper-button-prev {
+    left: 2px;
+  }
+  .swiper-button-next {
+    right: 2px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6,
+    .img7 {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .img1 {
+      background-image: url(/battlenet/images/banner1/img-1.png);
+    }
+    .cart1 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 60%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img2 {
+      background-image: url(/battlenet/images/banner1/img-2.png);
+    }
+    .cart2 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 60%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img3 {
+      background-image: url(/battlenet/images/banner1/img-3.png);
+    }
+    .cart3 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 70%;
+        margin: 2px auto;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img4 {
+      background-image: url(/battlenet/images/banner1/img-4.png);
+    }
+    .cart4 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 90%;
+        margin: 2px auto;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img5 {
+      background-image: url(/battlenet/images/banner1/img-5.png);
+    }
+    .cart5 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 70%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img6 {
+      background-image: url(/battlenet/images/banner1/img-6.png);
+    }
+    .cart6 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 100%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+    .img7 {
+      background-image: url(/battlenet/images/banner1/img-7.png);
+    }
+    .cart7 {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+      z-index: 3;
+      img {
+        width: 85%;
+        margin: 2px auto;
+      }
+      h1 {
+        font-size: 19px;
+        line-height: 27px;
+        color: white;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 80%;
+        height: 80px;
+        font-size: 20px;
+        font-family: objectsans;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.cards {
+  height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  .card {
+    min-height: 420px;
+    overflow: hidden;
+    &:hover {
+      background-color: #313339;
+    }
+    &:hover .card-body {
+      padding-top: 10px;
+    }
+    .card-body {
+      transition-duration: 200ms;
+      transition-timing-function: linear;
+    }
+  }
+}
+.bg {
+  margin-top: 80px;
+  background-color: aquamarine;
+  width: 100%;
+  height: 570px;
+  background-color: blue;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: -180px;
+  object-fit: cover;
+  background-image: url(/battlenet/images/app/img-bg.png);
+  .n {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    .img {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 85%;
+      }
+    }
+    .matn {
+      font-family: DMsans;
+      width: 40%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      row-gap: 17px;
+
+      .download {
+        font-size: 22px;
+      }
+      .b {
+        column-gap: 10px;
+        .one {
+          &:hover {
+            border: 1px, solid, #ffffff;
+            border-color: #ffffff;
+          }
+        }
+        .two {
+          &:hover {
+            border: 1px, solid, #ffffff;
+            border-color: #ffffff;
+          }
+        }
+      }
+      .a {
+        margin-top: 30px;
+        font-family: DMsans;
+        span {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.bg-m {
+  margin-top: 80px;
+  background-color: aquamarine;
+  width: 100%;
+  height: 600px;
+  background-color: blue;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-image: url(/battlenet/images/app/img-bg.png);
+  .n {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    .img {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 90%;
+      }
+    }
+    .matn {
+      font-family: DMsans;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10px;
+
+      .download {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+      }
+      .b {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+        .one {
+          &:hover {
+            border: 1px, solid, #ffffff;
+            border-color: #ffffff;
+          }
+        }
+        .two {
+          &:hover {
+            border: 1px, solid, #ffffff;
+            border-color: #ffffff;
+          }
+        }
+      }
+      .a {
+        margin-top: 30px;
+        font-family: DMsans;
+        span {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.image1 {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+html {
+  scrollbar-width: inherit;
+  scrollbar-color: #888 #ffffff;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* Light-mode Swiper pagination fixes: make inactive bullets darker and visible */
+html:not(.dark) .swiper-pagination-bullets .swiper-pagination-bullet,
+html:not(.dark) .swiper-pagination-bullet {
+  background-color: #9ca3af !important; /* gray-400 */
+  opacity: 1 !important;
+  width: 40px !important;
+  height: 5px !important;
+  border-radius: 2px !important;
+  z-index: 20 !important; /* ensure bullets sit above other controls */
+}
+html:not(.dark)
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active,
+html:not(.dark) .swiper-pagination-bullet-active {
+  background-color: #007aff !important;
+}
+
+/* Mobile-specific: shorten pagination bullets and move them up so they don't overlap the pause button */
+@media (max-width: 480px) {
+  html:not(.dark) .swiper-pagination-bullets .swiper-pagination-bullet,
+  html:not(.dark) .swiper-pagination-bullet {
+    width: 18px !important;
+    height: 4px !important;
+    margin: 0 4px !important;
+    border-radius: 2px !important;
+  }
+  /* center pagination and ensure it's above controls */
+  .banner .swiper-pagination {
+    bottom: -8px !important;
+    z-index: 40 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  /* place pause button on the same horizontal line, slightly to the right of pagination */
+  .banner .pas {
+    bottom: -8px !important;
+    z-index: 35 !important;
+    left: calc(
+      50% + 36px
+    ) !important; /* adjust distance from center/pagination */
+    transform: translateX(-50%) !important;
+  }
+  .banner .pas button {
+    width: 34px !important;
+    height: 34px !important;
+    padding: 4px !important;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
