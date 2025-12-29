@@ -92,6 +92,20 @@
         background-color: #15171e !important;
         color-scheme: dark !important;
       }
+
+      /* Header text in dark mode: use semi-transparent white for better contrast */
+      html.dark .header-m,
+      html.dark .header-menu,
+      html.dark .header-m *,
+      html.dark .header-menu * {
+        color: #ffffff80 !important;
+      }
+
+      /* Preserve orange text color in dark mode (e.g., prices/labels) */
+      html.dark [class*="text-[#ffb814]"],
+      html.dark .text-\[\#ffb814\] {
+        color: #ffb814 !important;
+      }
     </style>
   </head>
   <body>

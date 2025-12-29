@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Battle.net</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./image/favicon/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/output.css" />
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="stylesheet" href="./src/css/input.css" />
 
     <style>
       /* Light-mode overrides (only apply when html does NOT have .dark) */
@@ -106,13 +106,13 @@
       /* Search boxes: slightly darker in light mode for better contrast */
       html:not(.dark) .search-m,
       html:not(.dark) .search {
-        background-color: #e6e9ee !important;
+        background-color: transparent !important;
         color: #111827 !important;
       }
       html:not(.dark) .search-m .input,
       html:not(.dark) .search .input,
       html:not(.dark) .input {
-        background-color: #e6e9ee !important;
+        background-color: transparent !important;
         color: #111827 !important;
       }
 
@@ -135,6 +135,27 @@
       html.dark body {
         background-color: #15171e !important;
         color-scheme: dark !important;
+      }
+
+      /* Header text in dark mode: use semi-transparent white for better contrast */
+      html.dark .header-m,
+      html.dark .header-menu,
+      html.dark .header-m *,
+      html.dark .header-menu * {
+        color: #ffffff80 !important;
+      }
+
+      /* Card text in dark mode: make text slightly darker for better contrast */
+      html.dark .card,
+      html.dark .card *,
+      html.dark .card-title {
+        color: #c4c5c7 !important;
+      }
+
+      /* Preserve orange text color in dark mode (e.g., prices/labels) */
+      html.dark [class*="text-[#ffb814]"],
+      html.dark .text-\[\#ffb814\] {
+        color: #ffb814 !important;
       }
     </style>
   </head>
