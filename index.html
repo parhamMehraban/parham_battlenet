@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Battle.net</title>
-    <link rel="shortcut icon" href="./image/favicon/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./image/favicon/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./src/css/output.css" />
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./src/css/input.css" />
@@ -133,7 +137,7 @@
       }
       html.dark,
       html.dark body {
-        background-color: #15171e !important;
+        background-color: #1e201e !important;
         color-scheme: dark !important;
       }
 
@@ -157,13 +161,23 @@
       html.dark .text-\[\#ffb814\] {
         color: #ffb814 !important;
       }
+
+      /* Dark mode: tone down very-bright white hover backgrounds */
+      html.dark [class*="hover:bg-[#ffffff90]"]:hover,
+      html.dark [class*="hover:bg-[#ffffffb3]"]:hover,
+      html.dark [class*="hover:bg-[#ffffffcc]"]:hover,
+      html.dark [class*="group-hover:bg-[#ffffff90]"]:hover {
+        /* make hover subtle/darker in dark mode */
+        background-color: rgba(255, 255, 255, 0.04) !important;
+      }
     </style>
   </head>
   <body>
+    <!-- #region wrapper -->
     <div
       class="wrapper desktop:w-[100%] mobile:w-[100%] flex flex-col justify-center m-auto items-center h-full dark:bg-[#1E201E] bg-[#F7F9FB] text-[#111827] desktop:max-w-[1500px] mx-auto"
     >
-      <!-- #region header-->
+      <!-- #region mobileHeader-->
       <div
         class="header-m desktop:hidden w-full m-0 flex flex-wrap flex-col items-center justify-between gap-3 bg-[#F7F9FB] text-[#111827] border-y-[10px] dark:bg-[#1E201E] dark:border-[#1E201E] border-[#E6E9EE] sticky top-0 z-40"
       >
@@ -198,7 +212,6 @@
                   </g>
                 </svg>
               </button>
-
               <div
                 id="side-menu"
                 class="fixed top-0 left-0 h-full w-[80%] dark:bg-[#1E201E] bg-[#F2F4F7] text-[#111827] shadow-lg transform -translate-x-full overflow-auto transition-transform duration-300 z-50"
@@ -224,7 +237,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#272930] cursor-pointer"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#ffffff90] cursor-pointer"
                         >
                           Warcraft
                         </summary>
@@ -235,7 +248,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -266,7 +279,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -297,7 +310,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -328,7 +341,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -362,7 +375,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#272930] cursor-pointer"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#ffffff90] cursor-pointer"
                         >
                           Diablo
                         </summary>
@@ -373,7 +386,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -404,7 +417,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -435,7 +448,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -466,7 +479,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -495,7 +508,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -527,7 +540,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#272930] cursor-pointer"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#ffffff90] cursor-pointer"
                         >
                           Overwatch
                         </summary>
@@ -538,7 +551,7 @@
                             class="flex flex-row justify-center items-center flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -572,7 +585,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center cursor-pointer hover:bg-[#272930]"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center cursor-pointer hover:bg-[#ffffff90]"
                         >
                           StarCraft
                         </summary>
@@ -583,7 +596,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -614,7 +627,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row mt-2 mb-1 hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -648,7 +661,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#272930]"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center hover:bg-[#ffffff90]"
                         >
                           Call of Duty
                         </summary>
@@ -657,7 +670,7 @@
                         >
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -686,7 +699,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -715,7 +728,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -744,7 +757,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -773,7 +786,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -802,7 +815,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -831,7 +844,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -860,7 +873,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -889,7 +902,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -918,7 +931,7 @@
                           </li>
                           <li class="flex flex-row flex-wrap h-[65px]">
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure
                                 class="w-[17%] h-full flex items-center justify-center"
@@ -950,7 +963,7 @@
                     <li>
                       <details>
                         <summary
-                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center cursor-pointer hover:bg-[#272930]"
+                          class="w-full h-[50px] text-[16px] flex font-[DMsans] font-extralight items-center cursor-pointer hover:bg-[#ffffff90]"
                         >
                           more
                         </summary>
@@ -961,7 +974,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -988,7 +1001,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1015,7 +1028,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1042,7 +1055,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1069,7 +1082,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1096,7 +1109,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1123,7 +1136,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1150,7 +1163,7 @@
                             class="flex flex-row flex-wrap h-[65px] cursor-pointer"
                           >
                             <div
-                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930]"
+                              class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90]"
                             >
                               <figure class="w-[17%] h-full">
                                 <img
@@ -1181,7 +1194,7 @@
                 <li>
                   <details>
                     <summary
-                      class="w-full h-[50px] text-[17px] flex p-3 text-white font-bold font-[DMsans] items-center hover:bg-[#272930] cursor-pointer"
+                      class="w-full h-[50px] text-[17px] flex p-3 text-white font-bold font-[DMsans] items-center hover:bg-[#ffffff90] cursor-pointer"
                     >
                       Battle.net Balance
                       <img src="./images/dd.svg" alt="" />
@@ -1192,7 +1205,7 @@
                         class="flex flex-row flex-wrap h-[50px] cursor-pointer"
                       >
                         <div
-                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930] hover:text-white"
+                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90] hover:text-white"
                         >
                           <figure
                             class="w-[17%] h-full flex justify-center items-center"
@@ -1254,7 +1267,7 @@
                         class="flex flex-row flex-wrap h-[50px] cursor-pointer"
                       >
                         <div
-                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930] hover:text-white"
+                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90] hover:text-white"
                         >
                           <figure
                             class="w-[17%] h-full flex justify-center items-center"
@@ -1298,7 +1311,7 @@
                         class="flex flex-row flex-wrap h-[50px] cursor-pointer"
                       >
                         <div
-                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930] hover:text-white"
+                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90] hover:text-white"
                         >
                           <figure
                             class="w-[17%] h-full flex justify-center items-center"
@@ -1343,7 +1356,7 @@
                         class="flex flex-row flex-wrap h-[50px] cursor-pointer"
                       >
                         <div
-                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#272930] hover:text-white cursor-pointer"
+                          class="w-full gap-3 h-full flex flex-row shadow-sm hover:bg-[#ffffff90] hover:text-white cursor-pointer"
                         >
                           <figure
                             class="w-[17%] h-full flex justify-center items-center"
@@ -1442,10 +1455,9 @@
                         </a>
                       </div>
                     </li>
-                    <!-- ----- -->
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:bg-[#272930]"
+                        class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -1480,10 +1492,9 @@
                         </div>
                       </div>
                     </li>
-                    <!-- ----- -->
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#272930]"
+                        class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -1523,10 +1534,9 @@
                         </div>
                       </div>
                     </li>
-                    <!-- ----- -->
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#272930]"
+                        class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -1563,10 +1573,9 @@
                         </div>
                       </div>
                     </li>
-                    <!-- ----- -->
                     <li class="flex flex-row flex-wrap pb-2">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row shadow-sm hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row shadow-sm hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -1606,12 +1615,11 @@
                         </div>
                       </div>
                     </li>
-                    <!-- ----- -->
                   </ul>
                 </div>
                 <li class="flex flex-row flex-wrap mx-2">
                   <div
-                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#ffffff90]"
                   >
                     <figure class="w-[10%] h-[100%]">
                       <svg
@@ -1662,7 +1670,7 @@
                 </li>
                 <li class="flex flex-row flex-wrap pb-2 mx-2">
                   <div
-                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#ffffff90]"
                   >
                     <figure class="w-[7%] h-[100%] mr-2">
                       <svg
@@ -1700,7 +1708,7 @@
                 </li>
                 <li class="flex flex-row flex-wrap pb-2 mx-2">
                   <div
-                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#272930]"
+                    class="card px-2 w-[100%] h-[45px] flex flex-row shadow-sm text-[#FFFFFF] hover:bg-[#ffffff90]"
                   >
                     <figure class="w-[7%] h-[100%] mr-2">
                       <svg
@@ -1758,25 +1766,29 @@
           </div>
         </div>
       </div>
-      <!-- info -->
+      <!-- #endregion mobileHeader-->
+      <!-- #region desktopHeader -->
       <div
         class="header-info mobile:hidden desktop:flex m-0 w-[98%] justify-between dark:bg-[#1E201E] bg-[#F7F9FB] text-[#111827] flex flex-row"
       >
         <div class="logo flex w-[40%]">
           <a href="#" class="flex w-[35%] items-center">
-            <img class="w-[100%]" src="./images/battle-net-logo.png" alt=""
+            <img
+              class="w-[100%]"
+              src="./src/image/battle-net-logo.png"
+              alt="logo"
           /></a>
         </div>
-        <!-- data -->
+        <!-- #region topHeaderRight -->
         <div
           class="data mobile:hidden gap-3 justify-end items-center text-end w-[58%] desktop:flex flex-row h-[100%]"
         >
           <div
-            class="down cursor-pointer hover:bg-[#212329] shadow-sm rounded-[5px] h-[100%]"
+            class="down cursor-pointer hover:bg-[#212329] rounded-[5px] h-[100%]"
           >
             <div class="navbar h-[100%] flex">
               <a
-                class="font-[notoBold] flex text-[16px] text-[#FFFFFF] w-[100%] border-0 hover:border-0"
+                class="font-[notoBold] flex text-[16px] text-[#FFFFFF] w-[100%] border-0"
                 ><svg
                   class="mr-2"
                   fill="#C4C5C7"
@@ -1812,11 +1824,11 @@
             </div>
           </div>
           <div
-            class="supp cursor-pointer hover:bg-[#212329] shadow-sm rounded-[5px] h-[100%]"
+            class="supp cursor-pointer hover:bg-[#212329] rounded-[5px] h-[100%]"
           >
             <div class="navbar h-[100%] flex">
               <a
-                class="h-[100%] w-[100%] font-[notoBold] flex text-[16px] text-[#FFFFFF] border-0 hover:border-0 hover:bg-[#212329] bg-[#15171E]"
+                class="h-[100%] w-[100%] font-[notoBold] flex text-[16px] text-[#FFFFFF] border-0"
               >
                 <svg
                   class="mr-2"
@@ -1856,10 +1868,8 @@
               </a>
             </div>
           </div>
-          <div class="acc z-100 cursor-pointer hover:bg-[#212329] h-[100%]">
-            <div
-              class="navbar hover:bg-[#303237] h-[100%] w-[100%] rounded-[5px] flex shadow-sm p-0"
-            >
+          <div class="acc z-100 cursor-pointer h-[100%]">
+            <div class="navbar h-[100%] w-[100%] rounded-[5px] flex">
               <div
                 class="navbar-start hidden desktop:items-center desktop:justify-center desktop:flex w-[100%] h-[100%] desktop:text-[35px]"
               >
@@ -1868,7 +1878,7 @@
                 >
                   <li class="dropdown relative group">
                     <a
-                      class="h-[100%] w-[100%] font-[notoBold] flex text-[16px] text-[#FFFFFF]"
+                      class="h-[100%] block w-[100%] font-[notoBold] flex text-[16px] text-[#FFFFFF]"
                       tabindex="0"
                     >
                       <svg
@@ -1899,7 +1909,27 @@
                         </g>
                       </svg>
                       Account
-                      <img src="/battlenet/images/dd.svg" alt="" />
+                      <svg
+                        fill="#000000"
+                        width="20px"
+                        height="20px"
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                          />
+                        </g>
+                      </svg>
                     </a>
                     <ul
                       class="absolute right-0 top-[60px] w-[320px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 p-0 z-5"
@@ -1913,7 +1943,7 @@
                             class="w-[100%] h-[100%] flex items-center justify-center"
                           >
                             <button
-                              class="btn btn-primary shadow-none btn-xl text-[16px] h-[60%] w-[90%] font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
+                              class="btn btn-primary shadow-none btn-xl text-[16px] h-[60%] w-[90%] font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF] border-0"
                             >
                               Log In
                             </button>
@@ -1922,7 +1952,7 @@
                       </li>
                       <li class="flex flex-row flex-wrap pl-2 pr-2">
                         <div
-                          class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:text-[#FFFFFF] hover:bg-[#272930]"
+                          class="card w-[100%] h-[50px] flex flex-row shadow-sm mt-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                         >
                           <figure class="w-[7%] h-[100%]">
                             <svg
@@ -1959,7 +1989,7 @@
                       </li>
                       <li class="flex flex-row flex-wrap pl-2 pr-2">
                         <div
-                          class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                          class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                         >
                           <figure class="w-[7%] h-[100%]">
                             <svg
@@ -2001,7 +2031,7 @@
                       </li>
                       <li class="flex flex-row flex-wrap pl-2 pr-2">
                         <div
-                          class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                          class="card w-[100%] h-[50px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                         >
                           <figure class="w-[7%] h-[100%]">
                             <svg
@@ -2040,7 +2070,7 @@
                       </li>
                       <li class="flex flex-row flex-wrap pl-2 pr-2 pb-2">
                         <div
-                          class="card w-[100%] h-[45px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                          class="card w-[100%] h-[45px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                         >
                           <figure class="w-[7%] h-[100%]">
                             <svg
@@ -2130,14 +2160,15 @@
             </div>
           </div>
         </div>
+        <!-- #endregion topHeaderRight -->
       </div>
-      <!-- #region end-->
-      <!-- menu -->
+      <!-- #endregion desktopHeader -->
+      <!-- #region menu -->
       <div
         class="header-menu mobile:hidden desktop:flex border-y-[10px] dark:border-[#1E201E] dark:bg-[#1E201E] border-[#15171E] sticky top-0 z-50 bg-[#15171E] flex w-[100%] px-[15px] gap-x-2 justify-between"
       >
         <div
-          class="navbar font-[notoBold] rounded-[5px] search:w-[63%] flex dark:bg-[#3C3D37] bg-[#23252B] shadow-sm p-0"
+          class="navbar font-[notoBold] rounded-[5px] search:w-[63%] flex dark:bg-[#3C3D37] bg-[#23252B] p-0"
         >
           <div
             class="navbar-start leading-[100%] hidden desktop:flex w-full h-full text-[35px]"
@@ -2148,19 +2179,39 @@
                   class="pl-3 h-full w-full text-[95%] gap-0 flex hover:text-[#FFFFFF]"
                   tabindex="0"
                   >Warcraft
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
-                  class="absolute left-[-16px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
+                  class="absolute left-[-16px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
                 >
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-1.png"
+                          src="./src/image/mobile-menu/image-1.png"
                           alt="Album"
                         />
                       </figure>
@@ -2180,12 +2231,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-2.png"
+                          src="./src/image/mobile-menu/image-2.png"
                           alt="Album"
                         />
                       </figure>
@@ -2205,12 +2256,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-3.png"
+                          src="./src/image/mobile-menu/image-3.png"
                           alt="Album"
                         />
                       </figure>
@@ -2230,12 +2281,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-4.png"
+                          src="./src/image/mobile-menu/image-4.png"
                           alt="Album"
                         />
                       </figure>
@@ -2255,12 +2306,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-5.png"
+                          src="./src/image/mobile-menu/image-5.png"
                           alt="Album"
                         />
                       </figure>
@@ -2276,27 +2327,44 @@
                   </li>
                 </ul>
               </li>
-
-              <!-------------------------------->
-
               <li class="dropdown relative group hover:bg-[#303237]">
                 <a
                   class="px-2 pl-6 text-[95%] h-full gap-0 flex hover:text-[#FFFFFF]"
                   tabindex="0"
                   >Diablo
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
                   class="absolute left-[-15px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
                 >
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-6.png"
+                          src="./src/image/mobile-menu/image-6.png"
                           alt="Album"
                         />
                       </figure>
@@ -2312,17 +2380,16 @@
                       </div>
                     </div>
                   </li>
-
                   <li
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-7.png"
+                          src="./src/image/mobile-menu/image-7.png"
                           alt="Album"
                         />
                       </figure>
@@ -2342,12 +2409,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-8.png"
+                          src="./src/image/mobile-menu/image-8.png"
                           alt="Album"
                         />
                       </figure>
@@ -2367,12 +2434,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-9.png"
+                          src="./src/image/mobile-menu/image-9.png"
                           alt="Album"
                         />
                       </figure>
@@ -2392,12 +2459,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-10.png"
+                          src="./src/image/mobile-menu/image-10.png"
                           alt="Album"
                         />
                       </figure>
@@ -2413,27 +2480,44 @@
                   </li>
                 </ul>
               </li>
-
-              <!----------------------------->
-
               <li class="dropdown relative group hover:bg-[#303237]">
                 <a
                   class="px-2 pl-6 text-[95%] h-full gap-0 hover:text-[#FFFFFF] flex"
                   tabindex="0"
                   >Overwatch
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
                   class="absolute left-[-15px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
                 >
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-2 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-2 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-11.png"
+                          src="./src/image/mobile-menu/image-11.png"
                           alt="Album"
                         />
                       </figure>
@@ -2451,9 +2535,6 @@
                   </li>
                 </ul>
               </li>
-
-              <!-------------------------->
-
               <li
                 class="dropdown star:flex desktop:hidden relative group hover:bg-[#303237]"
               >
@@ -2461,19 +2542,39 @@
                   class="px-2 pl-6 text-[95%] h-full gap-0 flex hover:text-[#FFFFFF]"
                   tabindex="0"
                   >StarCraft
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
                   class="absolute left-[-15px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pr-2 z-5"
                 >
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-13.png"
+                          src="./src/image/mobile-menu/image-12.png"
                           alt="Album"
                         />
                       </figure>
@@ -2491,12 +2592,12 @@
                   </li>
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-12.png"
+                          src="./src/image/mobile-menu/image-13.png"
                           alt="Album"
                         />
                       </figure>
@@ -2514,27 +2615,44 @@
                   </li>
                 </ul>
               </li>
-
-              <!------------------------------>
-
               <li class="dropdown relative group hover:bg-[#303237]">
                 <a
                   class="px-2 pl-6 text-[95%] h-full gap-0 flex hover:text-[#FFFFFF]"
                   tabindex="0"
                   >Call of Duty
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
                   class="absolute left-[-15px] top-[65px] w-[280px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 overflow-auto pr-2 z-5"
                 >
                   <li class="flex flex-row flex-wrap">
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%]"
-                          src="/battlenet/images/menu/img-14.png"
+                          src="./src/image/mobile-menu/image-14.png"
                           alt="Album"
                         />
                       </figure>
@@ -2555,12 +2673,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-15.png"
+                          src="./src/image/mobile-menu/image-15.png"
                           alt="Album"
                         />
                       </figure>
@@ -2580,12 +2698,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-16.png"
+                          src="./src/image/mobile-menu/image-16.png"
                           alt="Album"
                         />
                       </figure>
@@ -2603,12 +2721,12 @@
                     class="flex flex-row flex-wrap items-center justify-center"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-17.png"
+                          src="./src/image/mobile-menu/image-17.png"
                           alt="Album"
                         />
                       </figure>
@@ -2628,12 +2746,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-18.png"
+                          src="./src/image/mobile-menu/image-18.png"
                           alt="Album"
                         />
                       </figure>
@@ -2653,12 +2771,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-19.png"
+                          src="./src/image/mobile-menu/image-19.png"
                           alt="Album"
                         />
                       </figure>
@@ -2676,12 +2794,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-20.png"
+                          src="./src/image/mobile-menu/image-20.png"
                           alt="Album"
                         />
                       </figure>
@@ -2701,12 +2819,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-21.png"
+                          src="./src/image/mobile-menu/image-21.png"
                           alt="Album"
                         />
                       </figure>
@@ -2726,12 +2844,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-22.png"
+                          src="./src/image/mobile-menu/image-22.png"
                           alt="Album"
                         />
                       </figure>
@@ -2754,12 +2872,12 @@
                     class="flex flex-row flex-wrap items-center justify-center mb-2"
                   >
                     <div
-                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#272930] hover:text-[#FFFFFF] shadow-sm"
+                      class="card w-[100%] h-[60px] flex flex-row hover:bg-[#ffffff90] hover:text-[#FFFFFF]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img
                           class="w-[100%] object-cover"
-                          src="/battlenet/images/menu/img-24.png"
+                          src="./src/image/mobile-menu/image-23.png"
                           alt="Album"
                         />
                       </figure>
@@ -2777,15 +2895,32 @@
                   </li>
                 </ul>
               </li>
-
-              <!---------------------------->
-
               <li class="dropdown relative group hover: hover:bg-[#303237]">
                 <a
                   class="px-2 pl-6 text-[95%] h-full gap-0 flex hover:text-[#FFFFFF]"
                   tabindex="0"
                   >more
-                  <img src="/battlenet/images/dd.svg" alt="" />
+                  <svg
+                    fill="#000000"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"
+                      />
+                    </g>
+                  </svg>
                 </a>
                 <ul
                   class="absolute left-[-15px] top-[65px] w-[560px] dark:bg-[#1E201E] bg-[#1A1C23] rounded-box shadow max-h-0 opacity-0 overflow-hidden transition-all duration-250 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 pl-0 ml-0 pr-0.5 z-5 flex flex-wrap"
@@ -2793,12 +2928,12 @@
                   <ul class="w-[48%] ml-0">
                     <li class="flex flex-row">
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%]"
-                            src="/battlenet/images/menu/img-25.png"
+                            src="./src/image/mobile-menu/image-24.png"
                             alt="Album"
                           />
                         </figure>
@@ -2816,12 +2951,12 @@
                       class="flex flex-row flex-wrap items-center justify-center"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-26.png"
+                            src="./src/image/mobile-menu/image-25.png"
                             alt="Album"
                           />
                         </figure>
@@ -2841,12 +2976,12 @@
                       class="flex flex-row flex-wrap items-center justify-center"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-27.png"
+                            src="./src/image/mobile-menu/image-26.png"
                             alt="Album"
                           />
                         </figure>
@@ -2866,12 +3001,12 @@
                       class="flex flex-row flex-wrap items-center justify-center"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-28.png"
+                            src="./src/image/mobile-menu/image-27.png"
                             alt="Album"
                           />
                         </figure>
@@ -2891,12 +3026,12 @@
                       class="flex flex-row flex-wrap items-center justify-center mb-2"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-29.png"
+                            src="./src/image/mobile-menu/image-28.png"
                             alt="Album"
                           />
                         </figure>
@@ -2914,12 +3049,12 @@
                       class="flex flex-row flex-wrap items-center justify-center mb-2"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-30.png"
+                            src="./src/image/mobile-menu/image-29.png"
                             alt="Album"
                           />
                         </figure>
@@ -2939,12 +3074,12 @@
                   <ul class="w-[49%] mr-0 pr-0 pl-0 ml-0">
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[60px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%]"
-                            src="/battlenet/images/menu/img-31.png"
+                            src="./src/image/mobile-menu/image-30.png"
                             alt="Album"
                           />
                         </figure>
@@ -2964,12 +3099,12 @@
                       class="flex flex-row flex-wrap items-center justify-center"
                     >
                       <div
-                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#272930] shadow-sm"
+                        class="card w-[100%] h-[60px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img
                             class="w-[100%] object-cover"
-                            src="/battlenet/images/menu/img-32.png"
+                            src="./src/image/mobile-menu/image-31.png"
                             alt="Album"
                           />
                         </figure>
@@ -2993,13 +3128,13 @@
 
           <div class="navbar-end w-0"></div>
         </div>
-        <!-- #region end-->
-        <!-- search -->
+        <!-- #endregion menu-->
+        <!-- #region search -->
         <div
-          class="header-search search:w-[37%] desktop:w-[27%] justify-between flex flex-wrap shadow-sm"
+          class="header-search search:w-[37%] desktop:w-[27%] justify-between flex flex-wrap"
         >
           <div
-            class="search font-[notoBold] search:w-[65%] desktop:w-[20%] desktop:justify-center rounded-[5px] flex group hover:bg-[#303237] dark:bg-[#3C3D37] bg-[#23252B] p-0 desktop:flex desktop:text-[35px] items-center"
+            class="search shadow-sm font-[notoBold] search:w-[65%] desktop:w-[20%] desktop:justify-center rounded-[5px] flex group hover:bg-[#303237] dark:bg-[#3C3D37] bg-[#23252B] p-0 desktop:flex desktop:text-[35px] items-center"
           >
             <label
               for="input"
@@ -3014,9 +3149,8 @@
               placeholder="Search shop"
             />
           </div>
-          <!-- 111 -->
           <div
-            class="navbar dark:bg-[#3C3D37] hover:bg-[#303237] h-[100%] search:w-[34%] desktop:w-[78%] rounded-[5px] flex bg-[#23252B] shadow-sm p-0"
+            class="navbar shadow-sm dark:bg-[#3C3D37] hover:bg-[#303237] h-[100%] search:w-[34%] desktop:w-[78%] rounded-[5px] flex bg-[#23252B] p-0"
           >
             <div
               class="navbar-start hidden desktop:items-center desktop:justify-center desktop:flex w-full h-[100%] desktop:text-[35px]"
@@ -3036,7 +3170,7 @@
                   >
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[55px] flex flex-row shadow-sm mt-1 hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[55px] flex flex-row mt-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -3096,7 +3230,7 @@
                     </li>
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[55px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[55px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -3136,7 +3270,7 @@
                     </li>
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[55px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[55px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -3177,7 +3311,7 @@
                     </li>
                     <li class="flex flex-row flex-wrap">
                       <div
-                        class="card w-[100%] h-[55px] flex flex-row shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[55px] flex flex-row hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[7%] h-[100%]">
                           <svg
@@ -3221,9 +3355,7 @@
           </div>
         </div>
       </div>
-      <!-- #region end-->
-
-      <!-- #region end-->
+      <!-- #endregion search -->
       <!-- #region banner -->
       <div class="banner desktop:inline mobile:hidden mt-2">
         <div class="swiper mySwiper">
@@ -3232,9 +3364,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img1 z-2"></div>
+              <div class="image-1 z-2"></div>
               <div class="kart1">
-                <img src="/battlenet/images/banner/img-11.png" alt="" />
+                <img src="./src/image/banner/image-11.png" alt="img-11" />
                 <h1>
                   Up to 67% off through <br />
                   October 15
@@ -3248,9 +3380,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img2 z-2"></div>
+              <div class="image-2 z-2"></div>
               <div class="kart2">
-                <img src="/battlenet/images/banner/img-21.png" alt="" />
+                <img src="./src/image/banner/image-21.png" alt="img-2" />
                 <h1>
                   Player housing is coming to <br />
                   WoW, claim your cozy <br />
@@ -3266,9 +3398,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img3 z-2"></div>
+              <div class="image-3 z-2"></div>
               <div class="kart3">
-                <img src="/battlenet/images/banner/img-31.png" alt="" />
+                <img src="./src/image/banner/image-31.png" alt="img-3" />
                 <h1>
                   Season 06 is live. Get the<br />
                   new BlackCell Pack.
@@ -3282,9 +3414,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent"
               ></div>
-              <div class="img4 z-2"></div>
+              <div class="image-4 z-2"></div>
               <div class="kart4">
-                <img src="/battlenet/images/banner/img-41.png" alt="" />
+                <img src="./src/image/banner/image-41.png" alt="img-41" />
                 <h1>
                   Last Chance to make a<br />
                   splash with the Premium <br />
@@ -3299,9 +3431,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img5 z-2"></div>
+              <div class="image-5 z-2"></div>
               <div class="kart5">
-                <img src="/battlenet/images/banner/img-51.png" alt="" />
+                <img src="./src/image/banner/image-51.png" alt="img-51" />
                 <h1>
                   Take fate into your own<br />
                   hands with the Mega Bundle!
@@ -3315,9 +3447,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img6 z-2"></div>
+              <div class="image-6 z-2"></div>
               <div class="kart6">
-                <img src="/battlenet/images/banner/img-61.png" alt="" />
+                <img src="./src/image/banner/image-61.png" alt="img-61" />
                 <h1>
                   Get the Reznov Challenge <br />
                   Pack and more
@@ -3331,9 +3463,9 @@
               <div
                 class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
               ></div>
-              <div class="img7 z-2"></div>
+              <div class="image-7 z-2"></div>
               <div class="kart7">
-                <img src="/battlenet/images/banner/img-71.png" alt="" />
+                <img src="./src/image/banner/image-71.png" alt="img-71" />
                 <h1>
                   Unleash chaos in the new <br />
                   season, now live
@@ -3376,9 +3508,9 @@
           </button>
         </div>
       </div>
-      <!-- #region end-->
+      <!-- #endregion banner-->
 
-      <!-- mobile banner -->
+      <!-- #region mobileBanner -->
       <div class="banner1 desktop:hidden mobile:inline w-[92%] mt-2">
         <div class="swiper my-Swiper">
           <div class="swiper-wrapper">
@@ -3510,9 +3642,9 @@
         </div>
       </div>
 
-      <!-- #region end-->
+      <!-- #endregion mobileBanner-->
 
-      <!-- #region cards1 -->
+      <!-- #region cardsFirst -->
       <div class="cards desktop:w-[98%] mobile:w-[92%]">
         <div
           class="head w-[100%] text-[160%] font-[500] font-[objectsans] text-white"
@@ -3522,9 +3654,8 @@
         <div
           class="cards-main gap-y-5 w-full flex flex-row flex-wrap justify-between items-center"
         >
-          <!-- 1--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-1.png)]"
@@ -3582,9 +3713,8 @@
               </div>
             </div>
           </div>
-          <!--2 --------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-2.png)]"
@@ -3621,9 +3751,8 @@
               </div>
             </div>
           </div>
-          <!-- 3--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-3.png)]"
@@ -3679,9 +3808,8 @@
               </div>
             </div>
           </div>
-          <!-- 4--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-4.png)]"
@@ -3728,7 +3856,7 @@
           </div>
           <!-- 5--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-5.png)]"
@@ -3767,7 +3895,7 @@
           </div>
           <!-- 6--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-6.png)]"
@@ -3811,7 +3939,7 @@
           </div>
           <!-- 7--------------------- -->
           <div
-            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-7.png)]"
@@ -3848,7 +3976,7 @@
           </div>
           <!-- 8--------------------- -->
           <div
-            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-8.png)]"
@@ -3890,7 +4018,7 @@
           </div>
           <!-- 9--------------------- -->
           <div
-            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-9.png)]"
@@ -3935,7 +4063,7 @@
           </div>
           <!-- 10--------------------- -->
           <div
-            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:hidden desktop:flex mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-10.png)]"
@@ -3977,9 +4105,9 @@
           <!-- --------------------- -->
         </div>
       </div>
-      <!-- #region end-->
+      <!-- #endregion cardsFirst -->
 
-      <!-- #region cards2 -->
+      <!-- #region cardsSecond -->
       <div class="cards desktop:w-[98%] mobile:w-[92%]">
         <div
           class="head w-[100%] text-[160%] font-[500] font-[objectsans] text-white"
@@ -3991,7 +4119,7 @@
         >
           <!-- 1--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-1.png)]"
@@ -4050,7 +4178,7 @@
           </div>
           <!-- 2--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-3.png)]"
@@ -4108,7 +4236,7 @@
           </div>
           <!-- 3--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-3.png)]"
@@ -4151,7 +4279,7 @@
           </div>
           <!-- 4--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-4.png)]"
@@ -4189,7 +4317,7 @@
           </div>
           <!-- 5--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-5.png)]"
@@ -4233,7 +4361,7 @@
           </div>
           <!-- 6--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-6.png)]"
@@ -4275,7 +4403,7 @@
                   class="price font-[objectsans] flex w-[100%] desktop:text-[17px] mobile:text-[20px] text-[#DEDEDF]"
                 >
                   <div class="s w-[10%]">
-                    <img src="./images/cards/Platinum.png" alt="" />
+                    <img src="./src/images/cards/Platinum.png" alt="" />
                   </div>
                   <div class="gh">1,000 Platinum</div>
                 </div>
@@ -4284,7 +4412,7 @@
           </div>
           <!-- 7--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-7.png)]"
@@ -4332,7 +4460,7 @@
           </div>
           <!-- 8--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-9.png)]"
@@ -4379,7 +4507,7 @@
           </div>
           <!-- 9--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-9.png)]"
@@ -4421,7 +4549,7 @@
           </div>
           <!-- 10--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-10.png)]"
@@ -4464,10 +4592,9 @@
           <!-- --------------------- -->
         </div>
       </div>
-      <!-- #region end-->
+      <!-- #endregion cardsSecond-->
 
-      <!-- #region cards3 -->
-
+      <!-- #region cardsThird -->
       <div class="cards desktop:w-[98%] mobile:w-[92%]">
         <div
           class="head w-[100%] text-[160%] font-[500] font-[objectsans] text-white"
@@ -4479,7 +4606,7 @@
         >
           <!-- 1--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-1.png)]"
@@ -4518,7 +4645,7 @@
           </div>
           <!-- 2--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-2.png)]"
@@ -4556,7 +4683,7 @@
           </div>
           <!-- 3--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-3.png)]"
@@ -4595,7 +4722,7 @@
           </div>
           <!-- 4--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-4.png)]"
@@ -4640,7 +4767,7 @@
           </div>
           <!-- 5--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-5.png)]"
@@ -4673,7 +4800,7 @@
           </div>
           <!-- 6--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-6.png)]"
@@ -4712,7 +4839,7 @@
           </div>
           <!-- 7--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-7.png)]"
@@ -4757,7 +4884,7 @@
           </div>
           <!-- 8--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-4.png)]"
@@ -4795,7 +4922,7 @@
           </div>
           <!-- 9--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-9.png)]"
@@ -4842,7 +4969,7 @@
           </div>
           <!-- 10--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-10.png)]"
@@ -4876,10 +5003,9 @@
           <!-- --------------------- -->
         </div>
       </div>
-      <!-- #region end-->
+      <!-- #endregion cardsThird -->
 
-      <!-- #region cards4 -->
-
+      <!-- #region cardsLast-->
       <div class="cards desktop:w-[98%] mobile:w-[92%]">
         <div
           class="head w-[100%] text-[160%] font-[500] font-[objectsans] text-white"
@@ -4891,7 +5017,7 @@
         >
           <!-- 1--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-2.png)]"
@@ -4933,7 +5059,7 @@
           </div>
           <!-- 2--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-3.png)]"
@@ -4978,7 +5104,7 @@
           </div>
           <!-- 3--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-1.png)]"
@@ -5017,7 +5143,7 @@
           </div>
           <!-- 4--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-1.png)]"
@@ -5064,7 +5190,7 @@
           </div>
           <!-- 5--------------------- -->
           <div
-            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-7.png)]"
@@ -5109,7 +5235,7 @@
           </div>
           <!-- 6--------------------- -->
           <div
-            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card group mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-6.png)]"
@@ -5162,7 +5288,7 @@
           </div>
           <!-- 7--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards4/img-7.png)]"
@@ -5204,7 +5330,7 @@
           </div>
           <!-- 8--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards1/img-2.png)]"
@@ -5243,7 +5369,7 @@
           </div>
           <!-- 9--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards2/img-4.png)]"
@@ -5281,7 +5407,7 @@
           </div>
           <!-- 10--------------------- -->
           <div
-            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px] shadow-sm"
+            class="card desktop:flex mobile:hidden mobile:w-full relative dark:bg-[#3C3D37] bg-[#23252B] desktop:w-[19%] desktop:h-[400px] mobile:h-[440px]"
           >
             <div
               class="image1 mobile:bg-cover desktop:h-[40%] mobile:h-[50%] bg-[url(/battlenet/images/cards/cards3/img-9.png)]"
@@ -5329,10 +5455,9 @@
           <!-- --------------------- -->
         </div>
       </div>
-      <!-- #region end-->
+      <!-- #endregion cardsLast-->
 
-      <!-- #region app -->
-
+      <!-- #region download -->
       <div class="bg desktop:flex mobile:hidden">
         <div class="n">
           <div class="img">
@@ -5369,10 +5494,9 @@
         </div>
       </div>
 
-      <!-- #region end-->
+      <!-- #endregion download-->
 
-      <!-- #region app-m -->
-
+      <!-- #region downloadMobile -->
       <div class="bg-m desktop:hidden mobile:flex w-[92%]">
         <div class="n">
           <div class="matn">
@@ -5409,10 +5533,9 @@
         </div>
       </div>
 
-      <!-- #region end-->
+      <!-- #endregion downloadMobile-->
 
       <!-- #region footer -->
-
       <div
         class="footer mobile:hidden desktop:flex gap-3 flex-wrap w-[98%] pl-[60px] pr-[60px]"
       >
@@ -5451,7 +5574,7 @@
                 <ul class="w-[48%] ml-0 flex flex-col justify-baseline">
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]">
                         <img src="/battlenet/images/tik.svg" alt="" />
@@ -5467,7 +5590,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5481,7 +5604,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5495,7 +5618,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5509,7 +5632,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5521,7 +5644,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5533,7 +5656,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5545,7 +5668,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5559,7 +5682,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5575,7 +5698,7 @@
                 <ul class="w-[49%] flex flex-col justify-baseline">
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5587,7 +5710,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5599,7 +5722,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5611,7 +5734,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5625,7 +5748,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5637,7 +5760,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5649,7 +5772,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5661,7 +5784,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5673,7 +5796,7 @@
                   </li>
                   <li class="flex flex-row w-[100%]">
                     <div
-                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                      class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                     >
                       <figure class="w-[13%] h-[100%]"></figure>
                       <div
@@ -5759,9 +5882,9 @@
         </div>
       </div>
 
-      <!-- #region end-->
+      <!-- #endregion footer-->
 
-      <!-- #region footer-m -->
+      <!-- #region mobileFooter -->
       <div
         class="mt-[30px] desktop:hidden flex flex-wrap justify-center items-center w-[98%]"
       >
@@ -5805,7 +5928,7 @@
                   <ul class="w-full ml-0 flex flex-col justify-baseline">
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]">
                           <img src="/battlenet/images/tik.svg" alt="" />
@@ -5821,7 +5944,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5835,7 +5958,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5849,7 +5972,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5863,7 +5986,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5877,7 +6000,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5889,7 +6012,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5903,7 +6026,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5917,7 +6040,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5931,7 +6054,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5945,7 +6068,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5959,7 +6082,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5971,7 +6094,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5985,7 +6108,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -5999,7 +6122,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -6011,7 +6134,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -6023,7 +6146,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -6037,7 +6160,7 @@
                     </li>
                     <li class="flex flex-row w-[100%]">
                       <div
-                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
+                        class="card w-[100%] h-[45px] flex flex-row mt-2 mb-1 hover:text-[#FFFFFF] hover:bg-[#ffffff90]"
                       >
                         <figure class="w-[13%] h-[100%]"></figure>
                         <div
@@ -6133,13 +6256,12 @@
         </div>
       </div>
 
-      <!-- #region end-->
-
+      <!-- #endregion mobileFooter-->
+      <!-- #region darkModeBottun -->
       <div
         class="moon w-fit h-fit rounded-[6px] bg-gray-200 fixed left-3 bottom-3 z-20 p-1 shadow-md"
       >
         <label class="swap swap-rotate items-center justify-center">
-          <!-- this hidden checkbox controls the state -->
           <input
             type="checkbox"
             class="theme-controler"
@@ -6147,8 +6269,6 @@
             aria-label="Toggle theme"
             title="Toggle theme"
           />
-
-          <!-- sun icon -->
           <svg
             class="swap-off h-10 w-10 fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -6158,8 +6278,6 @@
               d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
             />
           </svg>
-
-          <!-- moon icon -->
           <svg
             class="swap-on h-10 w-10 fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -6171,10 +6289,9 @@
           </svg>
         </label>
       </div>
-
-      <!-- #region end-->
+      <!-- #endregion darkModeBottun -->
     </div>
-
+    <!-- #endregion wrapper -->
     <script src="./swiper/swiper-bundle.min.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
@@ -6273,7 +6390,6 @@
         isPlaying = !isPlaying;
       });
     </script>
-
     <script>
       const html = document.documentElement;
       const controller = document.querySelector(".theme-controler");

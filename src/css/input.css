@@ -1,6 +1,42 @@
+@font-face {
+  font-family: notoBold;
+  src: url(../fonts/noto/bold/NotoSans-Bold.eot),
+    url(../fonts/noto/bold/NotoSans-Bold.woff),
+    url(../fonts/noto/bold/NotoSans-Bold.woff2),
+    url(../fonts/noto/bold/NotoSans-Bold.ttf);
+}
+@font-face {
+  font-family: notoRegular;
+  src: url(../fonts/noto/regular/NotoSans-Regular.eot),
+    url(../fonts/noto/regular/NotoSans-Regular.ttf),
+    url(../fonts/noto/regular/NotoSans-Regular.woff),
+    url(../fonts/noto/regular/NotoSans-Regular.woff2);
+}
+@font-face {
+  font-family: objectBold;
+  src: url(../fonts/object/bold/ObjectSans-Bold.eot),
+    url(../fonts/object/bold/ObjectSans-Bold.ttf),
+    url(../fonts/object/bold/ObjectSans-Bold.woff),
+    url(../fonts/object/bold/ObjectSans-Bold.woff2);
+}
+@font-face {
+  font-family: objectMedium;
+  src: url(../fonts/object/medium/ObjectSans-Medium.eot),
+    url(../fonts/object/medium/ObjectSans-Medium.ttf),
+    url(../fonts/object/medium/ObjectSans-Medium.woff),
+    url(../fonts/object/medium/ObjectSans-Medium.woff2);
+}
+@font-face {
+  font-family: objectRegular;
+  src: url(../fonts/object/regular/ObjectSans-Regular.eot),
+    url(../fonts/object/regular/ObjectSans-Regular.ttf),
+    url(../fonts/object/regular/ObjectSans-Regular.woff),
+    url(../fonts/object/regular/ObjectSans-Regular.woff2);
+}
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: notoBold;
 }
 .banner {
   width: 98%;
@@ -66,19 +102,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .img1,
-    .img2,
-    .img3,
-    .img4,
-    .img5,
-    .img6,
-    .img7 {
+    .image-1,
+    .image-2,
+    .image-3,
+    .image-4,
+    .image-5,
+    .image-6,
+    .image-7 {
       width: 100%;
       height: 100%;
       background-position: center;
     }
-    .img1 {
-      background-image: url(/battlenet/images/banner/img-1.png);
+    .image-1 {
+      background-image: url(../image/banner/image-1.png);
     }
     .kart1 {
       position: absolute;
@@ -104,8 +140,8 @@
         margin-bottom: 20px;
       }
     }
-    .img2 {
-      background-image: url(/battlenet/images/banner/img-2.png);
+    .image-2 {
+      background-image: url(../image/banner/image-2.png);
     }
     .kart2 {
       position: absolute;
@@ -130,8 +166,8 @@
         margin-bottom: 20px;
       }
     }
-    .img3 {
-      background-image: url(/battlenet/images/banner/img-3.png);
+    .image-3 {
+      background-image: url(../image/banner/image-3.png);
     }
     .kart3 {
       position: absolute;
@@ -156,8 +192,8 @@
         margin-bottom: 20px;
       }
     }
-    .img4 {
-      background-image: url(/battlenet/images/banner/img-4.png);
+    .image-4 {
+      background-image: url(../image/banner/image-4.png);
     }
     .kart4 {
       position: absolute;
@@ -182,8 +218,8 @@
         margin-bottom: 20px;
       }
     }
-    .img5 {
-      background-image: url(/battlenet/images/banner/img-5.png);
+    .image-5 {
+      background-image: url(../image/banner/image-5.png);
     }
     .kart5 {
       position: absolute;
@@ -208,8 +244,8 @@
         margin-bottom: 20px;
       }
     }
-    .img6 {
-      background-image: url(/battlenet/images/banner/img-6.png);
+    .image-6 {
+      background-image: url(../image/banner/image-6.png);
     }
     .kart6 {
       position: absolute;
@@ -234,8 +270,8 @@
         margin-bottom: 20px;
       }
     }
-    .img7 {
-      background-image: url(/battlenet/images/banner/img-7.png);
+    .image-7 {
+      background-image: url(../image/banner/image-7.png);
     }
     .kart7 {
       position: absolute;
@@ -713,63 +749,53 @@ html {
   background-color: #777;
 }
 
+/* Ensure Swiper elements inherit your site fonts (non-positional) */
+.swiper,
+.swiper *,
+.swiper-slide,
+.swiper-slide *,
+.swiper-pagination,
+.swiper-pagination-bullet {
+  font-family: notoBold, objectRegular, DMsans, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
 ::-webkit-scrollbar-track {
   background: #f0f0f0;
   border-radius: 6px;
 }
 
-/* Light-mode Swiper pagination fixes: make inactive bullets darker and visible */
-html:not(.dark) .swiper-pagination-bullets .swiper-pagination-bullet,
-html:not(.dark) .swiper-pagination-bullet {
-  background-color: #9ca3af !important; /* gray-400 */
-  opacity: 1 !important;
-  width: 40px !important;
-  height: 5px !important;
-  border-radius: 2px !important;
-  z-index: 20 !important; /* ensure bullets sit above other controls */
-}
-html:not(.dark)
-  .swiper-pagination-bullets
-  .swiper-pagination-bullet.swiper-pagination-bullet-active,
-html:not(.dark) .swiper-pagination-bullet-active {
-  background-color: #007aff !important;
-}
-
-/* Mobile-specific: shorten pagination bullets and move them up so they don't overlap the pause button */
-@media (max-width: 480px) {
-  html:not(.dark) .swiper-pagination-bullets .swiper-pagination-bullet,
-  html:not(.dark) .swiper-pagination-bullet {
-    width: 18px !important;
-    height: 4px !important;
-    margin: 0 4px !important;
-    border-radius: 2px !important;
-  }
-  /* center pagination and ensure it's above controls */
-  .banner .swiper-pagination {
-    bottom: -8px !important;
-    z-index: 40 !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  /* place pause button on the same horizontal line, slightly to the right of pagination */
-  .banner .pas {
-    bottom: -8px !important;
-    z-index: 35 !important;
-    left: calc(
-      50% + 36px
-    ) !important; /* adjust distance from center/pagination */
-    transform: translateX(-50%) !important;
-  }
-  .banner .pas button {
-    width: 34px !important;
-    height: 34px !important;
-    padding: 4px !important;
-  }
-}
-
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+/* Light-mode: color-only Swiper pagination (NO repositioning) */
+html:not(.dark) .swiper-pagination,
+html:not(.dark) .swiper-pagination1,
+[data-theme="light"] .swiper-pagination,
+[data-theme="light"] .swiper-pagination1,
+:root:has(input.theme-controller[value="light"]:checked) .swiper-pagination,
+:root:has(input.theme-controller[value="light"]:checked) .swiper-pagination1 {
+  /* only visual tweaks — do not change placement */
+  background: #ffffff50; /* semi-transparent white */
+  border-radius: 9999px;
+  padding: 4px 8px;
+}
+
+/* Inactive bullets: darker so visible on light bg */
+html:not(.dark) .swiper-pagination-bullet,
+[data-theme="light"] .swiper-pagination-bullet,
+:root:has(input.theme-controller[value="light"]:checked)
+  .swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  opacity: 1 !important;
+}
+
+/* Active bullet color */
+html:not(.dark) .swiper-pagination-bullet-active,
+[data-theme="light"] .swiper-pagination-bullet-active,
+:root:has(input.theme-controller[value="light"]:checked)
+  .swiper-pagination-bullet-active {
+  background-color: #007aff !important;
+  opacity: 1 !important;
 }
