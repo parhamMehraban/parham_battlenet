@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battle.net Login</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./src/image/favicon/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/output.css" />
 
     <style>
@@ -109,16 +109,18 @@
     </style>
   </head>
   <body>
+    <!-- #region wrapper -->
     <div
       class="wrapper mobile:hidden w-full h-fit dark:bg-[#1E201E] bg-[#15171E] text-[#C4C5C7] desktop:flex flex-col justify-center m-auto items-center desktop:max-w-[1500px] mx-auto"
     >
+    <!-- #region login -->
       <div class="box w-full h-fit flex justify-center items-center">
         <div
           class="login card w-[27%] flex flex-col flex-wrap justify-center items-center"
         >
           <div class="logo flex mt-[45px] w-full">
             <a href="./index.html" class="flex justify-center items-center">
-              <img class="w-[60%]" src="./images/battle-net-logo.png" alt=""
+              <img class="w-[60%]" src="./src/image/battle-net-logo.png" alt="battle-net-logo"
             /></a>
           </div>
           <div class="login-info w-full">
@@ -144,7 +146,7 @@
               >Forgot email?</span
             >
             <button
-              class="btn btn-primary btn-xl mt-[30px] h-10 text-[16px] text-white shadow-none w-full font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
+              class="btn btn-primary btn-xl mt-[30px] h-10 text-[16px] text-white shadow-none w-full !font-[notoBold] bg-[#0074E0] hover:bg-[#47A6FF]"
             >
               Continue
             </button>
@@ -330,7 +332,7 @@
           </div>
         </div>
       </div>
-      <!-- end region -->
+      <!-- #endregion login -->
 
       <!-- #region footer -->
       <div
@@ -341,34 +343,47 @@
             class="about gap-0 justify-between pt-[50px] items-center flex flex-wrap w-full"
           >
             <div
-              class="main flex flex-wrap text-white w-[60%] font-[objectsans]"
+              class="main flex flex-wrap text-white w-[60%]"
             >
-              <a class="hover:bg-[#212329] p-4 rounded-[10px]" href="#"
+              <a class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]" href="#"
                 >Careers</a
               >
               <a
-                class="hover:bg-[#212329] p-4 rounded-[10px]"
+                class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]"
                 href="./index3.html"
                 >About</a
               >
-              <a class="hover:bg-[#212329] p-4 rounded-[10px]" href="#"
+              <a class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]" href="#"
                 >Support</a
               >
-              <a class="hover:bg-[#212329] p-4 rounded-[10px]" href="#"
+              <a class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]" href="#"
                 >Connect Us</a
               >
-              <a class="hover:bg-[#212329] p-4 rounded-[10px]" href="#"
+              <a class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]" href="#"
                 >Press</a
               >
-              <a class="hover:bg-[#212329] p-4 rounded-[10px]" href="#">API</a>
+              <a class="hover:bg-[#212329] p-4 rounded-[10px] !font-[notoBold]" href="#">API</a>
             </div>
             <div class="lang text-end w-[40%]">
               <details class="dropdown">
                 <summary
                   class="btn m-1 btn-active text-[#C4C5C7] p-4 border-0 hover:border-0 hover:bg-[#212329] bg-[#15171E]"
                 >
-                  <img src="./images/language.svg" alt="" /> English(US)
-                  <img src="./images/dd.svg" alt="" />
+                  <img src="./src/image/language.png" alt="language" /> English(US)
+                  <svg
+                   fill="#ffffff80" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier">
+
+<path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/>
+
+</g>
+
+</svg>
                 </summary>
                 <ul
                   class="menu dropdown-content h-[430px] top-[-430px] overflow-scroll flex flex-row bg-[#171926] right-0 rounded-box z-1 w-[450px] p-2"
@@ -379,7 +394,7 @@
                         class="card w-full h-[45px] flex flex-row mt-2 mb-1 shadow-sm hover:text-[#FFFFFF] hover:bg-[#272930]"
                       >
                         <figure class="w-[13%] h-full">
-                          <img src="/battlenet/images/tik.svg" alt="" />
+                          <img src="./src/image/tik.png" alt="tik" />
                         </figure>
                         <div
                           class="card-body items-start justify-center gap-0 h-[60%] flex p-0 w-[85%]"
@@ -632,15 +647,15 @@
           <div class="add gap-0 flex-wrap justify-between flex w-full">
             <div class="main1 mb-[120px] w-[70%] flex flex-wrap">
               <div class="image items-center flex w-[30%] mr-5">
-                <a href="">
+                <a href="./index.html">
                   <img
                     class="w-full h-fit"
-                    src="./images/battle-net-logo.png"
-                    alt=""
+                    src="./src/image/battle-net-logo.png"
+                    alt="battle-net-logo"
                   />
                 </a>
               </div>
-              <div class="parr font-[DMsans] gap-5 flex flex-wrap flex-col">
+              <div class="parr gap-5 flex flex-wrap flex-col">
                 <div class="par text-gray-200/50 text-[13px]">
                   ©2025 Blizzard Entertainment, Inc. <br />
                   All
@@ -653,11 +668,11 @@
                   owners.
                 </div>
                 <div class="foot gap-3 flex flex-wrap">
-                  <a class="hover:text-white" href="#">Privasy</a>
-                  <a class="hover:text-white" href="#">Legal</a>
-                  <a class="hover:text-white" href="#">Terms</a>
-                  <a class="hover:text-white" href="#">Cookie Policy</a>
-                  <a class="hover:text-white" href="#">Cookies Setting</a>
+                  <a class="hover:text-white !font-[notoBold]" href="#">Privasy</a>
+                  <a class="hover:text-white !font-[notoBold]" href="#">Legal</a>
+                  <a class="hover:text-white !font-[notoBold]" href="#">Terms</a>
+                  <a class="hover:text-white !font-[notoBold]" href="#">Cookie Policy</a>
+                  <a class="hover:text-white !font-[notoBold]" href="#">Cookies Setting</a>
                 </div>
               </div>
             </div>
@@ -1333,15 +1348,16 @@
         </div>
       </div>
     </div>
+    <!-- #endregion wrapper -->
     <script>
       const html = document.documentElement;
       const controller = document.querySelector(".theme-controler");
 
       controller.addEventListener("change", () => {
         if (controller.checked) {
-          html.classList.add("dark"); // حالت شب
+          html.classList.add("dark");
         } else {
-          html.classList.remove("dark"); // حالت روز
+          html.classList.remove("dark");
         }
       });
     </script>

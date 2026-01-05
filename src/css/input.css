@@ -380,7 +380,7 @@
       background-size: cover;
     }
     .img1 {
-      background-image: url(/battlenet/images/banner1/img-1.png);
+      background-image: url(../image/mobileBanner/image-1.png);
     }
     .cart1 {
       position: absolute;
@@ -406,7 +406,7 @@
       }
     }
     .img2 {
-      background-image: url(/battlenet/images/banner1/img-2.png);
+      background-image: url(../image/mobileBanner/image-2.png);
     }
     .cart2 {
       position: absolute;
@@ -432,7 +432,7 @@
       }
     }
     .img3 {
-      background-image: url(/battlenet/images/banner1/img-3.png);
+      background-image: url(../image/mobileBanner/image-3.png);
     }
     .cart3 {
       position: absolute;
@@ -459,7 +459,7 @@
       }
     }
     .img4 {
-      background-image: url(/battlenet/images/banner1/img-4.png);
+      background-image: url(../image/mobileBanner/image-4.png);
     }
     .cart4 {
       position: absolute;
@@ -486,7 +486,7 @@
       }
     }
     .img5 {
-      background-image: url(/battlenet/images/banner1/img-5.png);
+      background-image: url(../image/mobileBanner/image-5.png);
     }
     .cart5 {
       position: absolute;
@@ -512,7 +512,7 @@
       }
     }
     .img6 {
-      background-image: url(/battlenet/images/banner1/img-6.png);
+      background-image: url(../image/mobileBanner/image-6.png);
     }
     .cart6 {
       position: absolute;
@@ -538,7 +538,7 @@
       }
     }
     .img7 {
-      background-image: url(/battlenet/images/banner1/img-7.png);
+      background-image: url(../image/mobileBanner/image-7.png);
     }
     .cart7 {
       position: absolute;
